@@ -132,6 +132,13 @@ int main(void)
   MX_TIM14_Init();
   /* USER CODE BEGIN 2 */
   HAL_UART_Receive_IT(&huart4, &rx_byte, 1);
+  
+  uint32_t last_tx_tick = HAL_GetTick();
+  TxPacket tx_packet;
+  tx_packet.header = 0xBBBB;
+  for (int i = 0; i < 6; i++) {
+      tx_packet.encoders[i] = 0;
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -141,6 +148,23 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    if (HAL_GetTick() - last_tx_tick >= 20) { // 50 Гц (20 мс)
+        last_tx_tick = HAL_GetTick();
+        
+        // Инкрементируем фейковые счетчики в зависимости от текущего linear_x
+        int32_t inc = (int32_t)(rx_packet.payload.movement.linear_x * 100.0f);
+        for (int i = 0; i < 6; i++) {
+            tx_packet.encoders[i] += inc;
+        }
+        
+        // Считаем CRC-8 от данных без байта CRC
+        tx_packet.crc = calculate_crc8((uint8_t*)&tx_packet, sizeof(TxPacket) - 1);
+        
+        // Отправляем пакет по UART4 через DMA
+        if (huart4.gState == HAL_UART_STATE_READY) {
+            HAL_UART_Transmit_DMA(&huart4, (uint8_t*)&tx_packet, sizeof(TxPacket));
+        }
+    }
   }
   /* USER CODE END 3 */
 }

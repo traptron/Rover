@@ -1,6 +1,7 @@
 import serial
 import struct
 import time
+import threading
 
 # Настройки COM-порта (настройте под ваш Orange Pi, например /dev/ttyUSB0 или /dev/ttyS0)
 SERIAL_PORT = '/dev/ttyS7'
@@ -64,6 +65,41 @@ def pack_movement_packet(linear_x: float, angular_z: float, led_mask: int) -> by
     
     return packet_with_crc
 
+def read_uart_thread(ser):
+    if not ser:
+        return
+    
+    buf = bytearray()
+    packet_size = 27 # 2 (header) + 24 (6 * int32) + 1 (crc)
+    
+    while True:
+        try:
+            if ser.in_waiting > 0:
+                buf.extend(ser.read(ser.in_waiting))
+                
+                while len(buf) >= packet_size:
+                    if buf[0] == 0xBB and buf[1] == 0xBB:
+                        packet = buf[:packet_size]
+                        
+                        crc_calc = calculate_crc8(packet[:-1])
+                        crc_recv = packet[-1]
+                        
+                        if crc_calc == crc_recv:
+                            unpacked = struct.unpack('<H6iB', packet)
+                            encoders = unpacked[1:7]
+                            print(f"\n[RX] Энкодеры: {encoders}")
+                        else:
+                            print(f"\n[RX] Ошибка CRC: calc={crc_calc}, recv={crc_recv}")
+                        
+                        buf = buf[packet_size:]
+                    else:
+                        buf.pop(0)
+            else:
+                time.sleep(0.01)
+        except Exception as e:
+            print(f"\n[RX] Ошибка чтения порта: {e}")
+            break
+
 def main():
     print(f"Открытие порта {SERIAL_PORT} на скорости {BAUD_RATE}...")
     try:
@@ -77,6 +113,10 @@ def main():
     print("\n--- Тестовый терминал управления Rover ---")
     print("Введите значения для отправки.")
     print("Для выхода нажмите Ctrl+C")
+    
+    if ser and ser.is_open:
+        rx_thread = threading.Thread(target=read_uart_thread, args=(ser,), daemon=True)
+        rx_thread.start()
     
     while True:
         try:

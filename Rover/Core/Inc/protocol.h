@@ -34,6 +34,13 @@ typedef struct {
     uint8_t crc;         // 1 байт: Контрольная сумма
 } FixedPacket;
 
+// Пакет для отправки от STM32 к OPi (Заголовок 0xBBBB, массив из 6 int32_t для тиков энкодеров, CRC-8)
+typedef struct {
+    uint16_t header;     // 2 байта: Маркер начала (0xBBBB)
+    int32_t encoders[6]; // 24 байта: 6 счетчиков энкодеров
+    uint8_t crc;         // 1 байт: Контрольная сумма
+} TxPacket;
+
 #pragma pack(pop)
 
 extern FixedPacket rx_packet;

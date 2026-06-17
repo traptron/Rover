@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/trapm/Desktop/Rover/Rover/cmake/stm32cubemx
+# Install script for directory: C:/Users/trapm/Desktop/Rover/Rover/Rover/cmake/stm32cubemx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
