@@ -7,7 +7,7 @@
 typedef struct {
     float linear_x;      // 4 байта
     float angular_z;     // 4 байта
-    uint8_t cmd_flags;   // 1 байт
+    uint8_t led_mask;    // 1 байт
     uint8_t reserved[11]; // 11 байт паддинга для выравнивания размера
 } MsgMovement;
 
@@ -41,3 +41,9 @@ extern FixedPacket rx_packet;
 
 // Прототип функции парсинга пакета
 void parse_packet(FixedPacket *packet);
+
+// Функция расчета CRC-8 (полином 0x07, SMBus)
+uint8_t calculate_crc8(const uint8_t *data, uint16_t size);
+
+// Функция-парсер входящих байт (вызывается из прерывания или периодически)
+void parse_incoming_byte(uint8_t byte);
