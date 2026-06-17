@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "protocol.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -58,7 +58,7 @@ DMA_HandleTypeDef hdma_uart4_rx;
 DMA_HandleTypeDef hdma_uart4_tx;
 
 /* USER CODE BEGIN PV */
-
+uint8_t rx_byte;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -131,7 +131,7 @@ int main(void)
   MX_TIM13_Init();
   MX_TIM14_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_UART_Receive_IT(&huart4, &rx_byte, 1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -941,7 +941,15 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+    if (huart->Instance == UART4) {
+        // Отправляем байт в парсер
+        parse_incoming_byte(rx_byte);
+        
+        // Снова запускаем прием следующего байта
+        HAL_UART_Receive_IT(&huart4, &rx_byte, 1);
+    }
+}
 /* USER CODE END 4 */
 
 /**

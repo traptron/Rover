@@ -1,1 +1,37 @@
 .vscode/
+
+# Build directories
+build/
+bin/
+obj/
+
+# Compiler outputs & executables
+*.elf
+*.hex
+*.bin
+*.map
+*.su
+*.o
+*.obj
+*.d
+*.a
+*.lib
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+CMakeSettings.json
+CMakeUserPresets.json
+CTestTestfile.cmake
+Makefile
+cmake_install.cmake
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+env/
