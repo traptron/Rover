@@ -1,0 +1,23 @@
+Wheel, Rim, Tire, Mount - 6 pieces
+Rockie, Bogie - 2 pieces
+Body - 1 piece for each part
+Differential bar - 1 piece
+
+Orange Pi 3B (8GB RAM recommended) - 1 piece
+NUCLEO STM32F429ZI - 1 piece
+JGA25-370 12V 130rpm with encoder - 6 pieces https://aliexpress.ru/item/32855724293.html?shpMethod=CAINIAO_STANDARD&sku_id=12000041529946492&spm=a2g2w.productlist.search_results.0.17be22c3AYHbef
+XL4015 DC-DC step-down - 1-2 pieces 
+18650 Battery - 8 pieces
+18650 Battery holder 4x slot - 2 pieces https://aliexpress.ru/item/1005003595795784.html?spm=a2g2w.orderlist.0.0.48514aa6wYXTMo&sku_id=12000026426467013
+BMS 4S 16.8V 40A (100A recommended) - 1 piece https://aliexpress.ru/item/4000274128382.html?spm=a2g2w.orderlist.0.0.48514aa6wYXTMo&sku_id=12000037978159621
+Charger 16.8V 2A - 1 piece https://aliexpress.ru/item/1005006648286527.html?spm=a2g2w.orderlist.0.0.48514aa6wYXTMo&sku_id=12000037919760313
+DRV8871 H-bridge - 6 pieces https://aliexpress.ru/item/1005009205001091.html?spm=a2g2w.orderlist.0.0.48514aa6wYXTMo&sku_id=12000048292821672
+KCD4 rocker switch - 1 piece https://aliexpress.ru/item/10000335722912.html?spm=a2g2w.orderlist.0.0.48514aa6wYXTMo&sku_id=20000000175766813
+Rod Ends SI8 - 2 pieces https://aliexpress.ru/item/1005005898128558.html?spm=a2g2w.orderlist.0.0.48514aa6wYXTMo&sku_id=12000034759354918
+Rod Ends SA8 - 2 pieces https://aliexpress.ru/item/1005005898128558.html?spm=a2g2w.orderlist.0.0.48514aa6wYXTMo&shpMethod=CAINIAO_ECONOMY&sku_id=12000034759354923
+Bearing 608zz - 10 pieces https://aliexpress.ru/item/1005006648286527.html?spm=a2g2w.orderlist.0.0.48514aa6wYXTMo&sku_id=12000037919760313
+DC-099 Power Jack Socket 5.5x2.1 - 1 piece https://aliexpress.ru/item/1005008928703998.html?shpMethod=CAINIAO_ECONOMY&sku_id=12000047240130039&spm=a2g2w.productlist.search_results.8.253ee4fclgX642
+
+For power wiring, AWG10 or AWG12 wires are required.
+For BMS use small cross-section wires.
+For logic use DuPont wires.
