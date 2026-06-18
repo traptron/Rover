@@ -22,6 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "protocol.h"
+#include "motor.h"
+#include "encoder.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -133,6 +135,24 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_UART_Receive_IT(&huart4, &rx_byte, 1);
   
+  for (int i = 0; i < 6; i++) {
+      PID_Init(&pid_controllers[i], 2.0f, 0.5f, 0.01f, -1000.0f, 1000.0f);
+  }
+  
+  HAL_TIM_Encoder_Start(&htim1, TIM_CHANNEL_ALL);
+  HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
+  HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL);
+  HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
+  HAL_TIM_Encoder_Start(&htim5, TIM_CHANNEL_ALL);
+  HAL_TIM_Encoder_Start(&htim8, TIM_CHANNEL_ALL);
+  
+  HAL_TIM_PWM_Start(&htim9, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim10, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim11, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim12, TIM_CHANNEL_2);
+  HAL_TIM_PWM_Start(&htim13, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim14, TIM_CHANNEL_1);
+  
   uint32_t last_tx_tick = HAL_GetTick();
   TxPacket tx_packet;
   tx_packet.header = 0xBBBB;
@@ -149,7 +169,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     if (HAL_GetTick() - last_tx_tick >= 20) { // 50 Гц (20 мс)
-        last_tx_tick = HAL_GetTick();
+        last_tx_tick += 20;
         
         // Failsafe проверка: если данных не было > 500 мс
         if (HAL_GetTick() - last_packet_time > 500) {
@@ -160,11 +180,15 @@ int main(void)
             HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_SET);   // Красный ВКЛ
         }
         
-        // Инкрементируем фейковые счетчики в зависимости от target_speed
+        read_encoders();
+        
+        float motor_outputs[6];
         for (int i = 0; i < 6; i++) {
-            int32_t inc = (int32_t)(target_speed[i] * 100.0f);
-            tx_packet.encoders[i] += inc;
+            tx_packet.encoders[i] += current_speeds[i];
+            motor_outputs[i] = PID_Update(&pid_controllers[i], target_speed[i], (float)current_speeds[i], 0.02f);
         }
+        
+        apply_motor_power(motor_outputs);
         
         // Считаем CRC-8 от данных без байта CRC
         tx_packet.crc = calculate_crc8((uint8_t*)&tx_packet, sizeof(TxPacket) - 1);

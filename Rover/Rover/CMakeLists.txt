@@ -47,6 +47,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
     ../Core/Src/protocol.c
     ../Core/Src/pid.c
+    ../Core/Src/motor.c
+    ../Core/Src/encoder.c
 )
 
 # Add include paths
