@@ -44,6 +44,8 @@ typedef struct {
 #pragma pack(pop)
 
 extern FixedPacket rx_packet;
+extern float target_speed[6];
+extern uint32_t last_packet_time;
 
 
 // Прототип функции парсинга пакета

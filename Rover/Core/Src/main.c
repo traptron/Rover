@@ -151,9 +151,18 @@ int main(void)
     if (HAL_GetTick() - last_tx_tick >= 20) { // 50 Гц (20 мс)
         last_tx_tick = HAL_GetTick();
         
-        // Инкрементируем фейковые счетчики в зависимости от текущего linear_x
-        int32_t inc = (int32_t)(rx_packet.payload.movement.linear_x * 100.0f);
+        // Failsafe проверка: если данных не было > 500 мс
+        if (HAL_GetTick() - last_packet_time > 500) {
+            for (int i = 0; i < 6; i++) {
+                target_speed[i] = 0.0f;
+            }
+            HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, GPIO_PIN_RESET); // Зеленый ВЫКЛ
+            HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_SET);   // Красный ВКЛ
+        }
+        
+        // Инкрементируем фейковые счетчики в зависимости от target_speed
         for (int i = 0; i < 6; i++) {
+            int32_t inc = (int32_t)(target_speed[i] * 100.0f);
             tx_packet.encoders[i] += inc;
         }
         

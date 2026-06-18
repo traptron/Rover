@@ -4,6 +4,24 @@
 
 // Определение глобальных переменных
 FixedPacket rx_packet;
+float target_speed[6];
+uint32_t last_packet_time = 0;
+
+void calculate_kinematics(float linear_x, float angular_z) {
+    float track_width = 0.3f; // 0.3 метра
+    float left_speed = linear_x - (angular_z * track_width / 2.0f);
+    float right_speed = linear_x + (angular_z * track_width / 2.0f);
+    
+    // Левые колеса: 0, 1, 2
+    target_speed[0] = left_speed;
+    target_speed[1] = left_speed;
+    target_speed[2] = left_speed;
+    
+    // Правые колеса: 3, 4, 5
+    target_speed[3] = right_speed;
+    target_speed[4] = right_speed;
+    target_speed[5] = right_speed;
+}
 
 
 /**
@@ -38,8 +56,8 @@ void parse_packet(FixedPacket *packet) {
                 HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET); // Синий ВЫКЛ
             }
             
-            // Рассчитываем уставки для моторов...
-            (void)target_ang;
+            // Рассчитываем уставки для моторов
+            calculate_kinematics(target_lin, target_ang);
             break;
         }
             
@@ -123,6 +141,7 @@ void parse_incoming_byte(uint8_t byte) {
             if (calc_crc == buf[sizeof(FixedPacket) - 1]) {
                 // Пакет корректен, копируем его в глобальный приемный буфер
                 memcpy(&rx_packet, buf, sizeof(FixedPacket));
+                last_packet_time = HAL_GetTick(); // Обновляем время последнего успешного пакета
                 parse_packet(&rx_packet);
             }
             idx = 0;
