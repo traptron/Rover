@@ -3392,7 +3392,7 @@ LOAD C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x08000000                g_pfnVectors
                 0x080001ac                        . = ALIGN (0x4)
 
-.text           0x080001ac     0x58d4
+.text           0x080001ac     0x58e8
                 0x080001ac                        . = ALIGN (0x4)
  *(.text)
  .text          0x080001ac       0x40 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -3790,108 +3790,108 @@ LOAD C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x08005736      0x14e CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
                 0x08005736                PID_Update
  .text.apply_motor_power
-                0x08005884       0xe8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+                0x08005884       0xfc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
                 0x08005884                apply_motor_power
  .text.read_encoders
-                0x0800596c       0xa4 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
-                0x0800596c                read_encoders
- .text.memset   0x08005a10       0x10 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
-                0x08005a10                memset
+                0x08005980       0xa4 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+                0x08005980                read_encoders
+ .text.memset   0x08005a24       0x10 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+                0x08005a24                memset
  .text.__libc_init_array
-                0x08005a20       0x48 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
-                0x08005a20                __libc_init_array
+                0x08005a34       0x48 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+                0x08005a34                __libc_init_array
  *(.glue_7)
- .glue_7        0x08005a68        0x0 linker stubs
+ .glue_7        0x08005a7c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08005a68        0x0 linker stubs
+ .glue_7t       0x08005a7c        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08005a68        0x0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08005a7c        0x0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08005a68        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08005a68                _init
- .init          0x08005a6c        0x8 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08005a7c        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08005a7c                _init
+ .init          0x08005a80        0x8 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08005a74        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08005a74                _fini
- .fini          0x08005a78        0x8 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08005a80                        . = ALIGN (0x4)
-                0x08005a80                        _etext = .
+ .fini          0x08005a88        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08005a88                _fini
+ .fini          0x08005a8c        0x8 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08005a94                        . = ALIGN (0x4)
+                0x08005a94                        _etext = .
 
-.vfp11_veneer   0x08005a80        0x0
- .vfp11_veneer  0x08005a80        0x0 linker stubs
+.vfp11_veneer   0x08005a94        0x0
+ .vfp11_veneer  0x08005a94        0x0 linker stubs
 
-.v4_bx          0x08005a80        0x0
- .v4_bx         0x08005a80        0x0 linker stubs
+.v4_bx          0x08005a94        0x0
+ .v4_bx         0x08005a94        0x0 linker stubs
 
-.iplt           0x08005a80        0x0
- .iplt          0x08005a80        0x0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08005a94        0x0
+ .iplt          0x08005a94        0x0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08005a80       0x20
-                0x08005a80                        . = ALIGN (0x4)
+.rodata         0x08005a94       0x20
+                0x08005a94                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x08005a80       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
-                0x08005a80                AHBPrescTable
+                0x08005a94       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
+                0x08005a94                AHBPrescTable
  .rodata.APBPrescTable
-                0x08005a90        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
-                0x08005a90                APBPrescTable
+                0x08005aa4        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
+                0x08005aa4                APBPrescTable
  .rodata.flagBitshiftOffset.0
-                0x08005a98        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
-                0x08005aa0                        . = ALIGN (0x4)
+                0x08005aac        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x08005ab4                        . = ALIGN (0x4)
 
-.ARM.extab      0x08005aa0        0x0
-                0x08005aa0                        . = ALIGN (0x4)
+.ARM.extab      0x08005ab4        0x0
+                0x08005ab4                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08005aa0                        . = ALIGN (0x4)
+                0x08005ab4                        . = ALIGN (0x4)
 
-.ARM            0x08005aa0        0x8
-                0x08005aa0                        . = ALIGN (0x4)
-                0x08005aa0                        __exidx_start = .
+.ARM            0x08005ab4        0x8
+                0x08005ab4                        . = ALIGN (0x4)
+                0x08005ab4                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08005aa0        0x8 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08005aa8                        __exidx_end = .
-                0x08005aa8                        . = ALIGN (0x4)
+ .ARM.exidx     0x08005ab4        0x8 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x08005abc                        __exidx_end = .
+                0x08005abc                        . = ALIGN (0x4)
 
-.preinit_array  0x08005aa8        0x0
-                0x08005aa8                        . = ALIGN (0x4)
-                0x08005aa8                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08005abc        0x0
+                0x08005abc                        . = ALIGN (0x4)
+                0x08005abc                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08005aa8                        PROVIDE (__preinit_array_end = .)
-                0x08005aa8                        . = ALIGN (0x4)
+                0x08005abc                        PROVIDE (__preinit_array_end = .)
+                0x08005abc                        . = ALIGN (0x4)
 
-.init_array     0x08005aa8        0x4
-                0x08005aa8                        . = ALIGN (0x4)
-                0x08005aa8                        PROVIDE (__init_array_start = .)
+.init_array     0x08005abc        0x4
+                0x08005abc                        . = ALIGN (0x4)
+                0x08005abc                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08005aa8        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08005aac                        PROVIDE (__init_array_end = .)
-                0x08005aac                        . = ALIGN (0x4)
+ .init_array    0x08005abc        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08005ac0                        PROVIDE (__init_array_end = .)
+                0x08005ac0                        . = ALIGN (0x4)
 
-.fini_array     0x08005aac        0x4
-                0x08005aac                        . = ALIGN (0x4)
+.fini_array     0x08005ac0        0x4
+                0x08005ac0                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08005aac        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x08005ac0        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x08005ab0                        . = ALIGN (0x4)
-                0x08005ab0                        _siccmram = LOADADDR (.ccmram)
+                0x08005ac4                        . = ALIGN (0x4)
+                0x08005ac4                        _siccmram = LOADADDR (.ccmram)
 
-.rel.dyn        0x08005ab0        0x0
- .rel.iplt      0x08005ab0        0x0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x08005ac4        0x0
+ .rel.iplt      0x08005ac4        0x0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.ccmram         0x10000000        0x0 load address 0x08005ab0
+.ccmram         0x10000000        0x0 load address 0x08005ac4
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _sccmram = .
  *(.ccmram)
  *(.ccmram*)
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _eccmram = .
-                0x08005ab0                        _sidata = LOADADDR (.data)
+                0x08005ac4                        _sidata = LOADADDR (.data)
 
-.data           0x20000000        0xc load address 0x08005ab0
+.data           0x20000000        0xc load address 0x08005ac4
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -3910,10 +3910,10 @@ LOAD C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x2000000c                        . = ALIGN (0x4)
  *fill*         0x20000009        0x3 
 
-.igot.plt       0x2000000c        0x0 load address 0x08005abc
+.igot.plt       0x2000000c        0x0 load address 0x08005ad0
  .igot.plt      0x2000000c        0x0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.tdata          0x2000000c        0x0 load address 0x08005abc
+.tdata          0x2000000c        0x0 load address 0x08005ad0
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x2000000c                        . = ALIGN (0x4)
                 0x2000000c                        _edata = .
@@ -3930,7 +3930,7 @@ LOAD C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 [!provide]                        PROVIDE (__data_source_end = __tdata_source_end)
                 [!provide]                        PROVIDE (__data_source_size = (__data_source_end - __data_source))
 
-.tbss           0x2000000c        0x0 load address 0x08005abc
+.tbss           0x2000000c        0x0 load address 0x08005ad0
                 0x2000000c                        _sbss = .
                 0x2000000c                        __bss_start__ = _sbss
  *(.tbss .tbss.*)
@@ -3947,7 +3947,7 @@ LOAD C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 [!provide]                        PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
 
-.bss            0x2000000c      0x5a8 load address 0x08005abc
+.bss            0x2000000c      0x5a8 load address 0x08005ad0
  *(.bss)
  .bss           0x2000000c       0x1c C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.bss*)
@@ -4019,7 +4019,7 @@ LOAD C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
 
 ._user_heap_stack
-                0x200005b4      0x604 load address 0x08005abc
+                0x200005b4      0x604 load address 0x08005ad0
                 0x200005b8                        . = ALIGN (0x8)
  *fill*         0x200005b4        0x4 
                 [!provide]                        PROVIDE (end = .)
@@ -4114,7 +4114,7 @@ LOAD linker stubs
  .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
  .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_info     0x00000000     0xed16
+.debug_info     0x00000000     0xed21
  .debug_info    0x00000000      0x52e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
  .debug_info    0x0000052e     0x299d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .debug_info    0x00002ecb     0x14db cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
@@ -4131,12 +4131,12 @@ LOAD linker stubs
  .debug_info    0x0000de78       0x30 CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
  .debug_info    0x0000dea8      0x5c5 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
  .debug_info    0x0000e46d      0x1cd CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
- .debug_info    0x0000e63a      0x2b3 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
- .debug_info    0x0000e8ed      0x23e CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
- .debug_info    0x0000eb2b       0xe0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_info    0x0000ec0b      0x10b C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_info    0x0000e63a      0x2be CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+ .debug_info    0x0000e8f8      0x23e CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+ .debug_info    0x0000eb36       0xe0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_info    0x0000ec16      0x10b C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_abbrev   0x00000000     0x24b4
+.debug_abbrev   0x00000000     0x24b6
  .debug_abbrev  0x00000000      0x11a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
  .debug_abbrev  0x0000011a      0x278 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .debug_abbrev  0x00000392      0x283 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
@@ -4153,10 +4153,10 @@ LOAD linker stubs
  .debug_abbrev  0x00001e0b       0x24 CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
  .debug_abbrev  0x00001e2f      0x209 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
  .debug_abbrev  0x00002038      0x118 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
- .debug_abbrev  0x00002150       0xfc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
- .debug_abbrev  0x0000224c      0x101 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
- .debug_abbrev  0x0000234d       0x9e C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_abbrev  0x000023eb       0xc9 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_abbrev  0x00002150       0xfe CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+ .debug_abbrev  0x0000224e      0x101 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+ .debug_abbrev  0x0000234f       0x9e C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_abbrev  0x000023ed       0xc9 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
 .debug_aranges  0x00000000      0xe00
  .debug_aranges
@@ -4243,7 +4243,7 @@ LOAD linker stubs
  .debug_rnglists
                 0x00000ad4       0x13 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_macro    0x00000000    0x2345b
+.debug_macro    0x00000000    0x23461
  .debug_macro   0x00000000      0x1ce cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
  .debug_macro   0x000001ce      0xad8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
  .debug_macro   0x00000ca6       0x2e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
@@ -4302,10 +4302,10 @@ LOAD linker stubs
  .debug_macro   0x00023042       0x10 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
  .debug_macro   0x00023052       0x20 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
  .debug_macro   0x00023072       0x1b CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
- .debug_macro   0x0002308d      0x1e7 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
- .debug_macro   0x00023274      0x1e7 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+ .debug_macro   0x0002308d      0x1ed CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+ .debug_macro   0x0002327a      0x1e7 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
 
-.debug_line     0x00000000    0x105b3
+.debug_line     0x00000000    0x105c0
  .debug_line    0x00000000      0x78d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
  .debug_line    0x0000078d     0x3784 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .debug_line    0x00003f11     0x1969 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
@@ -4322,33 +4322,33 @@ LOAD linker stubs
  .debug_line    0x0000e8b2       0x7a CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
  .debug_line    0x0000e92c      0x94a CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
  .debug_line    0x0000f276      0x166 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
- .debug_line    0x0000f3dc      0x78d CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
- .debug_line    0x0000fb69      0x764 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
- .debug_line    0x000102cd      0x17e C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_line    0x0001044b      0x168 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_line    0x0000f3dc      0x79a CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+ .debug_line    0x0000fb76      0x764 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+ .debug_line    0x000102da      0x17e C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_line    0x00010458      0x168 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_str      0x00000000    0xda1be
- .debug_str     0x00000000    0xda1be cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
+.debug_str      0x00000000    0xda1d3
+ .debug_str     0x00000000    0xda1d3 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
                               0xd2faa (size before relaxing)
- .debug_str     0x000da1be    0xd4321 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_str     0x000da1be    0xd3b2d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_str     0x000da1be    0xd33de cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_str     0x000da1be    0xd3125 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_str     0x000da1be    0xd33b1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_str     0x000da1be    0xd3182 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
- .debug_str     0x000da1be    0xd38fb cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_str     0x000da1be    0xd3bcd cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_str     0x000da1be    0xd39ac cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_str     0x000da1be    0xd485a CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
- .debug_str     0x000da1be    0xd38ce CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
- .debug_str     0x000da1be    0xd4318 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_str     0x000da1be       0x90 CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
- .debug_str     0x000da1be    0xd60d3 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
- .debug_str     0x000da1be     0x2f1f CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
- .debug_str     0x000da1be    0xd33da CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
- .debug_str     0x000da1be    0xd33a9 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
- .debug_str     0x000da1be      0x211 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_str     0x000da1be      0x272 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_str     0x000da1d3    0xd4321 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_str     0x000da1d3    0xd3b2d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_str     0x000da1d3    0xd33de cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_str     0x000da1d3    0xd3125 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_str     0x000da1d3    0xd33b1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_str     0x000da1d3    0xd3182 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+ .debug_str     0x000da1d3    0xd38fb cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_str     0x000da1d3    0xd3bcd cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_str     0x000da1d3    0xd39ac cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_str     0x000da1d3    0xd485a CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+ .debug_str     0x000da1d3    0xd38ce CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+ .debug_str     0x000da1d3    0xd4318 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_str     0x000da1d3       0x90 CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
+ .debug_str     0x000da1d3    0xd60d3 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+ .debug_str     0x000da1d3     0x2f1f CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .debug_str     0x000da1d3    0xd33ef CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+ .debug_str     0x000da1d3    0xd33a9 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+ .debug_str     0x000da1d3      0x211 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_str     0x000da1d3      0x272 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
 .debug_frame    0x00000000     0x362c
  .debug_frame   0x00000000       0x50 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj

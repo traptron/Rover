@@ -136,7 +136,7 @@ int main(void)
   HAL_UART_Receive_IT(&huart4, &rx_byte, 1);
   
   for (int i = 0; i < 6; i++) {
-      PID_Init(&pid_controllers[i], 2.0f, 0.5f, 0.01f, -1000.0f, 1000.0f);
+      PID_Init(&pid_controllers[i], 2.0f, 0.5f, 0.01f, -8999.0f, 8999.0f);
   }
   
   HAL_TIM_Encoder_Start(&htim1, TIM_CHANNEL_ALL);
@@ -182,10 +182,21 @@ int main(void)
         
         read_encoders();
         
+        // Константы для перевода тиков энкодера в м/с
+        const float GEAR_RATIO = 46.0f;     // Передаточное число редуктора 1:46
+        const float ENCODER_CPR = 44.0f;    // 11 PPR * 4 (счет по обоим фронтам)
+        const float WHEEL_DIAMETER = 0.10f; // Колесо 100 мм (0.1 м)
+        const float PI = 3.1415926f;
+        const float METERS_PER_TICK = (PI * WHEEL_DIAMETER) / (GEAR_RATIO * ENCODER_CPR);
+
         float motor_outputs[6];
         for (int i = 0; i < 6; i++) {
             tx_packet.encoders[i] += current_speeds[i];
-            motor_outputs[i] = PID_Update(&pid_controllers[i], target_speed[i], (float)current_speeds[i], 0.02f);
+            
+            // Переводим скорость из "тиков за 20мс" в "метры в секунду"
+            float current_speed_ms = (current_speeds[i] / 0.02f) * METERS_PER_TICK;
+            
+            motor_outputs[i] = PID_Update(&pid_controllers[i], target_speed[i], current_speed_ms, 0.02f);
         }
         
         apply_motor_power(motor_outputs);

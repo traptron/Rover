@@ -1,4 +1,5 @@
 .vscode/
+.agents/
 
 # Build directories
 build/
@@ -35,3 +36,7 @@ __pycache__/
 .venv/
 venv/
 env/
+
+# Agent and graphify directories
+.agents/
+graphify-out/
