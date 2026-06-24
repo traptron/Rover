@@ -30,7 +30,7 @@ class UartBridgeNode(Node):
     def __init__(self):
         super().__init__('uart_bridge_node')
         
-        # Declare parameters
+        # Объявление параметров
         self.declare_parameter('kp', 1.0)
         self.declare_parameter('ki', 0.0)
         self.declare_parameter('kd', 0.0)
@@ -38,17 +38,17 @@ class UartBridgeNode(Node):
         self.declare_parameter('serial_port', '/dev/ttyS7')
         self.declare_parameter('baudrate', 115200)
 
-        # Odometry variables
+        # Переменные одометрии
         self.prev_encoders = None
         self.x = 0.0
         self.y = 0.0
         self.theta = 0.0
         
-        # Constants
+        # Константы
         self.TRACK_WIDTH = 0.29
         self.METERS_PER_TICK = (math.pi * 0.10) / (46.0 * 44.0)
 
-        # Connect to serial port
+        # Подключение к serial порту
         port = self.get_parameter('serial_port').value
         baudrate = self.get_parameter('baudrate').value
         try:
@@ -58,15 +58,15 @@ class UartBridgeNode(Node):
             self.get_logger().error(f"Failed to connect to serial port: {e}")
             raise e
 
-        # Parameter callback
+        # Обработчик изменения параметров
         self.add_on_set_parameters_callback(self.parameters_callback)
 
-        # Publishers and Subscribers
+        # Паблишеры и сабскрайберы
         self.odom_pub = self.create_publisher(Odometry, '/odom', 10)
         self.encoders_pub = self.create_publisher(Int32MultiArray, '/encoders_raw', 10)
         self.cmd_vel_sub = self.create_subscription(Twist, '/cmd_vel', self.cmd_vel_cb, 10)
 
-        # Start RX thread
+        # Запуск потока приема (RX)
         self.rx_thread = threading.Thread(target=self.rx_loop, daemon=True)
         self.rx_thread.start()
 
@@ -98,8 +98,8 @@ class UartBridgeNode(Node):
         return SetParametersResult(successful=True)
 
     def send_pid_tune(self, motor_id, kp, ki, kd):
-        # Pack PID Tune message (msg_id=2)
-        # Header (2), msg_id (1), motor_id (1), kp (4), ki (4), kd (4), reserved (7)
+        # Упаковка сообщения настройки ПИД (msg_id=2)
+        # Заголовок (2), msg_id (1), motor_id (1), kp (4), ki (4), kd (4), резерв (7)
         payload = struct.pack('<H B B f f f 7s', 0xAA55, 2, motor_id, kp, ki, kd, b'\x00'*7)
         crc = calculate_crc8(payload)
         packet = payload + struct.pack('<B', crc)
@@ -112,10 +112,10 @@ class UartBridgeNode(Node):
     def cmd_vel_cb(self, msg):
         linear_x = msg.linear.x
         angular_z = msg.angular.z
-        led_mask = 1 # Optional: set LED mask behavior based on cmd_vel or other state
+        led_mask = 1 # Опционально: настройка маски светодиодов на основе cmd_vel
         
-        # Pack Movement message (msg_id=1)
-        # Header (2), msg_id (1), linear_x (4), angular_z (4), led_mask (1), reserved (11)
+        # Упаковка сообщения движения (msg_id=1)
+        # Заголовок (2), msg_id (1), linear_x (4), angular_z (4), led_mask (1), резерв (11)
         payload = struct.pack('<H B f f B 11s', 0xAA55, 1, linear_x, angular_z, led_mask, b'\x00'*11)
         crc = calculate_crc8(payload)
         packet = payload + struct.pack('<B', crc)
@@ -132,7 +132,7 @@ class UartBridgeNode(Node):
                 if sync == b'\xBB':
                     sync2 = self.ser.read(1)
                     if sync2 == b'\xBB':
-                        # Read 24 bytes of encoders + 1 byte CRC
+                        # Чтение 24 байт энкодеров + 1 байт CRC
                         data = self.ser.read(25)
                         if len(data) == 25:
                             packet_except_crc = b'\xBB\xBB' + data[:-1]
@@ -158,12 +158,12 @@ class UartBridgeNode(Node):
         delta_encoders = [encoders[i] - self.prev_encoders[i] for i in range(6)]
         self.prev_encoders = encoders
 
-        # Publish raw encoders
+        # Публикация сырых значений энкодеров
         enc_msg = Int32MultiArray()
         enc_msg.data = delta_encoders
         self.encoders_pub.publish(enc_msg)
 
-        # Left encoders: 0, 1, 2. Right encoders: 3, 4, 5.
+        # Левые энкодеры: 0, 1, 2. Правые энкодеры: 3, 4, 5.
         left_ticks = (delta_encoders[0] + delta_encoders[1] + delta_encoders[2]) / 3.0
         right_ticks = (delta_encoders[3] + delta_encoders[4] + delta_encoders[5]) / 3.0
 
@@ -177,7 +177,7 @@ class UartBridgeNode(Node):
         self.y += dist * math.sin(self.theta + d_theta / 2.0)
         self.theta += d_theta
 
-        # Publish Odometry
+        # Публикация одометрии
         msg = Odometry()
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.header.frame_id = 'odom'

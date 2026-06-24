@@ -20,25 +20,25 @@ try:
     package_share_directory = get_package_share_directory('uart_bridge_pkg')
     static_dir = os.path.join(package_share_directory, 'static')
 except Exception as e:
-    # Fallback for local testing without installation
+    # Резервный путь для локального тестирования без установки
     static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'static')
 
 class WebDashboardNode(Node):
     def __init__(self):
         super().__init__('web_dashboard_node')
         
-        # Subscribe to encoders_raw
+        # Подписка на сырые энкодеры
         self.create_subscription(Int32MultiArray, '/encoders_raw', self.encoders_cb, 10)
         
-        # Service client for setting parameters on uart_bridge_node
+        # Клиент сервиса для установки параметров в uart_bridge_node
         self.param_client = self.create_client(SetParameters, '/uart_bridge_node/set_parameters')
 
     def encoders_cb(self, msg):
-        # Emit via socketio
+        # Отправка через socketio
         socketio.emit('encoder_data', list(msg.data))
 
     def update_pid_params(self, motor_id, kp, ki, kd):
-        # Wait for service
+        # Ожидание доступности сервиса
         if not self.param_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().error('Service /uart_bridge_node/set_parameters not available')
             return
@@ -101,11 +101,11 @@ def main(args=None):
     rclpy.init(args=args)
     ros_node = WebDashboardNode()
     
-    # Run ROS in a separate thread
+    # Запуск ROS в отдельном потоке
     ros_thread = threading.Thread(target=spin_ros, daemon=True)
     ros_thread.start()
     
-    # Run Flask in the main thread
+    # Запуск Flask в главном потоке
     try:
         ros_node.get_logger().info("Starting Flask-SocketIO server on 0.0.0.0:5000")
         socketio.run(app, host='0.0.0.0', port=5000, allow_unsafe_werkzeug=True)
