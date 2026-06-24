@@ -5,6 +5,7 @@ from rclpy.node import Node
 from rcl_interfaces.msg import SetParametersResult
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
+from std_msgs.msg import Int32MultiArray
 import serial
 import threading
 import struct
@@ -62,6 +63,7 @@ class UartBridgeNode(Node):
 
         # Publishers and Subscribers
         self.odom_pub = self.create_publisher(Odometry, '/odom', 10)
+        self.encoders_pub = self.create_publisher(Int32MultiArray, '/encoders_raw', 10)
         self.cmd_vel_sub = self.create_subscription(Twist, '/cmd_vel', self.cmd_vel_cb, 10)
 
         # Start RX thread
@@ -155,6 +157,11 @@ class UartBridgeNode(Node):
 
         delta_encoders = [encoders[i] - self.prev_encoders[i] for i in range(6)]
         self.prev_encoders = encoders
+
+        # Publish raw encoders
+        enc_msg = Int32MultiArray()
+        enc_msg.data = delta_encoders
+        self.encoders_pub.publish(enc_msg)
 
         # Left encoders: 0, 1, 2. Right encoders: 3, 4, 5.
         left_ticks = (delta_encoders[0] + delta_encoders[1] + delta_encoders[2]) / 3.0
