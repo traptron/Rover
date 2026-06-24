@@ -1,3 +1,5 @@
+import os
+from glob import glob
 from setuptools import find_packages, setup
 
 package_name = 'uart_bridge_pkg'
@@ -10,6 +12,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'static'), glob('static/*')),
     ],
     install_requires=['setuptools', 'pyserial'],
     zip_safe=True,
@@ -20,7 +23,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'uart_bridge_node = uart_bridge_pkg.uart_bridge_node:main'
+            'uart_bridge_node = uart_bridge_pkg.uart_bridge_node:main',
+            'web_dashboard_node = uart_bridge_pkg.web_dashboard_node:main'
         ],
     },
 )
