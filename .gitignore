@@ -1,5 +1,6 @@
 .vscode/
-.agents/
+*.docx
+*.pdf
 
 # Build directories
 build/
