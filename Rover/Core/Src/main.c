@@ -135,8 +135,10 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_UART_Receive_IT(&huart4, &rx_byte, 1);
   
+  Master_PID_Init(&left_board_pid,  2.0f, 0.5f, 0.01f, 0.0f, 0.0f, (float)MAX_PWM);
+  Master_PID_Init(&right_board_pid, 2.0f, 0.5f, 0.01f, 0.0f, 0.0f, (float)MAX_PWM);
   for (int i = 0; i < 6; i++) {
-      PID_Init(&pid_controllers[i], 2.0f, 0.5f, 0.01f, -8999.0f, 8999.0f);
+      Slave_Init(&wheel_slaves[i], 0.5f);
   }
   
   HAL_TIM_Encoder_Start(&htim1, TIM_CHANNEL_ALL);
@@ -173,31 +175,22 @@ int main(void)
         
         // Failsafe проверка: если данных не было > 500 мс
         if (HAL_GetTick() - last_packet_time > 500) {
-            for (int i = 0; i < 6; i++) {
-                target_speed[i] = 0.0f;
-            }
+            target_left_speed = 0.0f;
+            target_right_speed = 0.0f;
             HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, GPIO_PIN_RESET); // Зеленый ВЫКЛ
             HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_SET);   // Красный ВКЛ
         }
         
         read_encoders();
         
-        // Константы для перевода тиков энкодера в м/с
-        const float GEAR_RATIO = 46.0f;     // Передаточное число редуктора 1:46
-        const float ENCODER_CPR = 44.0f;    // 11 PPR * 4 (счет по обоим фронтам)
-        const float WHEEL_DIAMETER = 0.10f; // Колесо 100 мм (0.1 м)
-        const float PI = 3.1415926f;
-        const float METERS_PER_TICK = (PI * WHEEL_DIAMETER) / (GEAR_RATIO * ENCODER_CPR);
-
-        float motor_outputs[6];
+        // Накопление тиков для TX-пакета
         for (int i = 0; i < 6; i++) {
             tx_packet.encoders[i] += current_speeds[i];
-            
-            // Переводим скорость из "тиков за 20мс" в "метры в секунду"
-            float current_speed_ms = (current_speeds[i] / 0.02f) * METERS_PER_TICK;
-            
-            motor_outputs[i] = target_speed[i] * (float)MAX_PWM;
         }
+        
+        // ПИД-управление (Master-Slave)
+        float motor_outputs[6];
+        update_rover_control(target_left_speed, target_right_speed, 0.02f, motor_outputs);
         
         apply_motor_power(motor_outputs);
         

@@ -2226,6 +2226,7 @@ Discarded input sections
  .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text          0x00000000        0x0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .data          0x00000000        0x0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
@@ -2746,10 +2747,23 @@ Discarded input sections
  .debug_macro   0x00000000      0x1de CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
  .debug_macro   0x00000000       0x3c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
  .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
  .text          0x00000000        0x0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
  .data          0x00000000        0x0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
  .bss           0x00000000        0x0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
  .debug_macro   0x00000000      0xad8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .debug_macro   0x00000000       0x8e CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .debug_macro   0x00000000       0x51 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .debug_macro   0x00000000      0x103 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .debug_macro   0x00000000       0x6a CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .debug_macro   0x00000000      0x1df CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
  .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
  .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
  .group         0x00000000        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
@@ -2794,6 +2808,7 @@ Discarded input sections
  .data          0x00000000        0x0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
  .bss           0x00000000        0x0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
  .debug_macro   0x00000000      0xad8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
  .debug_macro   0x00000000      0x29b CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
  .debug_macro   0x00000000       0x2e CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
  .debug_macro   0x00000000       0x28 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
@@ -3392,7 +3407,7 @@ LOAD C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x08000000                g_pfnVectors
                 0x080001ac                        . = ALIGN (0x4)
 
-.text           0x080001ac     0x593c
+.text           0x080001ac     0x5b04
                 0x080001ac                        . = ALIGN (0x4)
  *(.text)
  .text          0x080001ac       0x40 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -3580,318 +3595,325 @@ LOAD C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  *fill*         0x0800371a        0x2 
  .text.UART_SetConfig
                 0x0800371c      0x4e8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .text.main     0x08003c04      0x2ec CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+ .text.main     0x08003c04      0x288 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
                 0x08003c04                main
  .text.SystemClock_Config
-                0x08003ef0       0xe0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
-                0x08003ef0                SystemClock_Config
+                0x08003e8c       0xe0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x08003e8c                SystemClock_Config
  .text.MX_TIM1_Init
-                0x08003fd0       0xb0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x08003f6c       0xb0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.MX_TIM2_Init
-                0x08004080       0xa8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x0800401c       0xa8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.MX_TIM3_Init
-                0x08004128       0xa8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x080040c4       0xa8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.MX_TIM4_Init
-                0x080041d0       0xa8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x0800416c       0xa8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.MX_TIM5_Init
-                0x08004278       0xa8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x08004214       0xa8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.MX_TIM8_Init
-                0x08004320       0xb0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x080042bc       0xb0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.MX_TIM9_Init
-                0x080043d0       0x8c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x0800436c       0x8c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.MX_TIM10_Init
-                0x0800445c       0x9c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x080043f8       0x9c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.MX_TIM11_Init
-                0x080044f8       0x9c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x08004494       0x9c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.MX_TIM12_Init
-                0x08004594       0x8c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x08004530       0x8c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.MX_TIM13_Init
-                0x08004620       0x9c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x080045bc       0x9c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.MX_TIM14_Init
-                0x080046bc       0x9c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x08004658       0x9c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.MX_UART4_Init
-                0x08004758       0x54 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x080046f4       0x54 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.MX_DMA_Init
-                0x080047ac       0x50 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x08004748       0x50 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.MX_GPIO_Init
-                0x080047fc      0x2a8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x08004798      0x2a8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
  .text.HAL_UART_RxCpltCallback
-                0x08004aa4       0x3c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
-                0x08004aa4                HAL_UART_RxCpltCallback
+                0x08004a40       0x3c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x08004a40                HAL_UART_RxCpltCallback
  .text.Error_Handler
-                0x08004ae0        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
-                0x08004ae0                Error_Handler
+                0x08004a7c        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+                0x08004a7c                Error_Handler
  .text.NMI_Handler
-                0x08004aec        0x8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
-                0x08004aec                NMI_Handler
+                0x08004a88        0x8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+                0x08004a88                NMI_Handler
  .text.HardFault_Handler
-                0x08004af4        0x8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
-                0x08004af4                HardFault_Handler
+                0x08004a90        0x8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+                0x08004a90                HardFault_Handler
  .text.MemManage_Handler
-                0x08004afc        0x8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
-                0x08004afc                MemManage_Handler
+                0x08004a98        0x8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+                0x08004a98                MemManage_Handler
  .text.BusFault_Handler
-                0x08004b04        0x8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
-                0x08004b04                BusFault_Handler
+                0x08004aa0        0x8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+                0x08004aa0                BusFault_Handler
  .text.UsageFault_Handler
-                0x08004b0c        0x8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
-                0x08004b0c                UsageFault_Handler
+                0x08004aa8        0x8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+                0x08004aa8                UsageFault_Handler
  .text.SVC_Handler
-                0x08004b14        0xe CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
-                0x08004b14                SVC_Handler
+                0x08004ab0        0xe CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+                0x08004ab0                SVC_Handler
  .text.DebugMon_Handler
-                0x08004b22        0xe CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
-                0x08004b22                DebugMon_Handler
+                0x08004abe        0xe CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+                0x08004abe                DebugMon_Handler
  .text.PendSV_Handler
-                0x08004b30        0xe CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
-                0x08004b30                PendSV_Handler
+                0x08004acc        0xe CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+                0x08004acc                PendSV_Handler
  .text.SysTick_Handler
-                0x08004b3e        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
-                0x08004b3e                SysTick_Handler
- *fill*         0x08004b4a        0x2 
+                0x08004ada        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+                0x08004ada                SysTick_Handler
+ *fill*         0x08004ae6        0x2 
  .text.DMA1_Stream2_IRQHandler
-                0x08004b4c       0x14 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
-                0x08004b4c                DMA1_Stream2_IRQHandler
+                0x08004ae8       0x14 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+                0x08004ae8                DMA1_Stream2_IRQHandler
  .text.DMA1_Stream4_IRQHandler
-                0x08004b60       0x14 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
-                0x08004b60                DMA1_Stream4_IRQHandler
+                0x08004afc       0x14 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+                0x08004afc                DMA1_Stream4_IRQHandler
  .text.UART4_IRQHandler
-                0x08004b74       0x14 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
-                0x08004b74                UART4_IRQHandler
+                0x08004b10       0x14 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+                0x08004b10                UART4_IRQHandler
  .text.HAL_MspInit
-                0x08004b88       0x50 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08004b88                HAL_MspInit
+                0x08004b24       0x50 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08004b24                HAL_MspInit
  .text.HAL_TIM_Encoder_MspInit
-                0x08004bd8      0x324 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08004bd8                HAL_TIM_Encoder_MspInit
+                0x08004b74      0x324 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08004b74                HAL_TIM_Encoder_MspInit
  .text.HAL_TIM_PWM_MspInit
-                0x08004efc       0x70 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08004efc                HAL_TIM_PWM_MspInit
+                0x08004e98       0x70 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08004e98                HAL_TIM_PWM_MspInit
  .text.HAL_TIM_Base_MspInit
-                0x08004f6c       0xc8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08004f6c                HAL_TIM_Base_MspInit
+                0x08004f08       0xc8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08004f08                HAL_TIM_Base_MspInit
  .text.HAL_TIM_MspPostInit
-                0x08005034      0x1fc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08005034                HAL_TIM_MspPostInit
+                0x08004fd0      0x1fc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08004fd0                HAL_TIM_MspPostInit
  .text.HAL_UART_MspInit
-                0x08005230      0x16c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08005230                HAL_UART_MspInit
+                0x080051cc      0x16c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x080051cc                HAL_UART_MspInit
  .text.Reset_Handler
-                0x0800539c       0x50 CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
-                0x0800539c                Reset_Handler
+                0x08005338       0x50 CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
+                0x08005338                Reset_Handler
  .text.Default_Handler
-                0x080053ec        0x2 CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
-                0x080053ec                RTC_Alarm_IRQHandler
-                0x080053ec                HASH_RNG_IRQHandler
-                0x080053ec                EXTI2_IRQHandler
-                0x080053ec                TIM8_CC_IRQHandler
-                0x080053ec                UART8_IRQHandler
-                0x080053ec                SPI4_IRQHandler
-                0x080053ec                TIM1_CC_IRQHandler
-                0x080053ec                DMA2_Stream5_IRQHandler
-                0x080053ec                DMA1_Stream5_IRQHandler
-                0x080053ec                PVD_IRQHandler
-                0x080053ec                SDIO_IRQHandler
-                0x080053ec                TAMP_STAMP_IRQHandler
-                0x080053ec                CAN2_RX1_IRQHandler
-                0x080053ec                EXTI3_IRQHandler
-                0x080053ec                TIM8_TRG_COM_TIM14_IRQHandler
-                0x080053ec                TIM1_UP_TIM10_IRQHandler
-                0x080053ec                TIM8_UP_TIM13_IRQHandler
-                0x080053ec                I2C3_ER_IRQHandler
-                0x080053ec                EXTI0_IRQHandler
-                0x080053ec                I2C2_EV_IRQHandler
-                0x080053ec                CAN1_RX0_IRQHandler
-                0x080053ec                FPU_IRQHandler
-                0x080053ec                OTG_HS_WKUP_IRQHandler
-                0x080053ec                LTDC_ER_IRQHandler
-                0x080053ec                CAN2_SCE_IRQHandler
-                0x080053ec                DMA2_Stream2_IRQHandler
-                0x080053ec                SPI1_IRQHandler
-                0x080053ec                TIM6_DAC_IRQHandler
-                0x080053ec                TIM1_BRK_TIM9_IRQHandler
-                0x080053ec                DCMI_IRQHandler
-                0x080053ec                CAN2_RX0_IRQHandler
-                0x080053ec                DMA2_Stream3_IRQHandler
-                0x080053ec                USART6_IRQHandler
-                0x080053ec                USART3_IRQHandler
-                0x080053ec                CAN1_RX1_IRQHandler
-                0x080053ec                UART5_IRQHandler
-                0x080053ec                DMA2_Stream0_IRQHandler
-                0x080053ec                TIM4_IRQHandler
-                0x080053ec                I2C1_EV_IRQHandler
-                0x080053ec                DMA1_Stream6_IRQHandler
-                0x080053ec                DMA1_Stream1_IRQHandler
-                0x080053ec                TIM3_IRQHandler
-                0x080053ec                RCC_IRQHandler
-                0x080053ec                TIM8_BRK_TIM12_IRQHandler
-                0x080053ec                Default_Handler
-                0x080053ec                EXTI15_10_IRQHandler
-                0x080053ec                ADC_IRQHandler
-                0x080053ec                DMA1_Stream7_IRQHandler
-                0x080053ec                SPI5_IRQHandler
-                0x080053ec                TIM7_IRQHandler
-                0x080053ec                CAN2_TX_IRQHandler
-                0x080053ec                TIM5_IRQHandler
-                0x080053ec                DMA2_Stream7_IRQHandler
-                0x080053ec                I2C3_EV_IRQHandler
-                0x080053ec                EXTI9_5_IRQHandler
-                0x080053ec                RTC_WKUP_IRQHandler
-                0x080053ec                LTDC_IRQHandler
-                0x080053ec                ETH_WKUP_IRQHandler
-                0x080053ec                SPI2_IRQHandler
-                0x080053ec                OTG_HS_EP1_IN_IRQHandler
-                0x080053ec                DMA1_Stream0_IRQHandler
-                0x080053ec                CAN1_TX_IRQHandler
-                0x080053ec                EXTI4_IRQHandler
-                0x080053ec                ETH_IRQHandler
-                0x080053ec                OTG_HS_EP1_OUT_IRQHandler
-                0x080053ec                WWDG_IRQHandler
-                0x080053ec                SPI6_IRQHandler
-                0x080053ec                TIM2_IRQHandler
-                0x080053ec                OTG_FS_WKUP_IRQHandler
-                0x080053ec                TIM1_TRG_COM_TIM11_IRQHandler
-                0x080053ec                OTG_HS_IRQHandler
-                0x080053ec                DMA2D_IRQHandler
-                0x080053ec                EXTI1_IRQHandler
-                0x080053ec                UART7_IRQHandler
-                0x080053ec                USART2_IRQHandler
-                0x080053ec                I2C2_ER_IRQHandler
-                0x080053ec                DMA2_Stream1_IRQHandler
-                0x080053ec                CAN1_SCE_IRQHandler
-                0x080053ec                FLASH_IRQHandler
-                0x080053ec                DMA2_Stream4_IRQHandler
-                0x080053ec                USART1_IRQHandler
-                0x080053ec                OTG_FS_IRQHandler
-                0x080053ec                SPI3_IRQHandler
-                0x080053ec                I2C1_ER_IRQHandler
-                0x080053ec                FMC_IRQHandler
-                0x080053ec                DMA2_Stream6_IRQHandler
-                0x080053ec                SAI1_IRQHandler
-                0x080053ec                DMA1_Stream3_IRQHandler
- *fill*         0x080053ee        0x2 
+                0x08005388        0x2 CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
+                0x08005388                RTC_Alarm_IRQHandler
+                0x08005388                HASH_RNG_IRQHandler
+                0x08005388                EXTI2_IRQHandler
+                0x08005388                TIM8_CC_IRQHandler
+                0x08005388                UART8_IRQHandler
+                0x08005388                SPI4_IRQHandler
+                0x08005388                TIM1_CC_IRQHandler
+                0x08005388                DMA2_Stream5_IRQHandler
+                0x08005388                DMA1_Stream5_IRQHandler
+                0x08005388                PVD_IRQHandler
+                0x08005388                SDIO_IRQHandler
+                0x08005388                TAMP_STAMP_IRQHandler
+                0x08005388                CAN2_RX1_IRQHandler
+                0x08005388                EXTI3_IRQHandler
+                0x08005388                TIM8_TRG_COM_TIM14_IRQHandler
+                0x08005388                TIM1_UP_TIM10_IRQHandler
+                0x08005388                TIM8_UP_TIM13_IRQHandler
+                0x08005388                I2C3_ER_IRQHandler
+                0x08005388                EXTI0_IRQHandler
+                0x08005388                I2C2_EV_IRQHandler
+                0x08005388                CAN1_RX0_IRQHandler
+                0x08005388                FPU_IRQHandler
+                0x08005388                OTG_HS_WKUP_IRQHandler
+                0x08005388                LTDC_ER_IRQHandler
+                0x08005388                CAN2_SCE_IRQHandler
+                0x08005388                DMA2_Stream2_IRQHandler
+                0x08005388                SPI1_IRQHandler
+                0x08005388                TIM6_DAC_IRQHandler
+                0x08005388                TIM1_BRK_TIM9_IRQHandler
+                0x08005388                DCMI_IRQHandler
+                0x08005388                CAN2_RX0_IRQHandler
+                0x08005388                DMA2_Stream3_IRQHandler
+                0x08005388                USART6_IRQHandler
+                0x08005388                USART3_IRQHandler
+                0x08005388                CAN1_RX1_IRQHandler
+                0x08005388                UART5_IRQHandler
+                0x08005388                DMA2_Stream0_IRQHandler
+                0x08005388                TIM4_IRQHandler
+                0x08005388                I2C1_EV_IRQHandler
+                0x08005388                DMA1_Stream6_IRQHandler
+                0x08005388                DMA1_Stream1_IRQHandler
+                0x08005388                TIM3_IRQHandler
+                0x08005388                RCC_IRQHandler
+                0x08005388                TIM8_BRK_TIM12_IRQHandler
+                0x08005388                Default_Handler
+                0x08005388                EXTI15_10_IRQHandler
+                0x08005388                ADC_IRQHandler
+                0x08005388                DMA1_Stream7_IRQHandler
+                0x08005388                SPI5_IRQHandler
+                0x08005388                TIM7_IRQHandler
+                0x08005388                CAN2_TX_IRQHandler
+                0x08005388                TIM5_IRQHandler
+                0x08005388                DMA2_Stream7_IRQHandler
+                0x08005388                I2C3_EV_IRQHandler
+                0x08005388                EXTI9_5_IRQHandler
+                0x08005388                RTC_WKUP_IRQHandler
+                0x08005388                LTDC_IRQHandler
+                0x08005388                ETH_WKUP_IRQHandler
+                0x08005388                SPI2_IRQHandler
+                0x08005388                OTG_HS_EP1_IN_IRQHandler
+                0x08005388                DMA1_Stream0_IRQHandler
+                0x08005388                CAN1_TX_IRQHandler
+                0x08005388                EXTI4_IRQHandler
+                0x08005388                ETH_IRQHandler
+                0x08005388                OTG_HS_EP1_OUT_IRQHandler
+                0x08005388                WWDG_IRQHandler
+                0x08005388                SPI6_IRQHandler
+                0x08005388                TIM2_IRQHandler
+                0x08005388                OTG_FS_WKUP_IRQHandler
+                0x08005388                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08005388                OTG_HS_IRQHandler
+                0x08005388                DMA2D_IRQHandler
+                0x08005388                EXTI1_IRQHandler
+                0x08005388                UART7_IRQHandler
+                0x08005388                USART2_IRQHandler
+                0x08005388                I2C2_ER_IRQHandler
+                0x08005388                DMA2_Stream1_IRQHandler
+                0x08005388                CAN1_SCE_IRQHandler
+                0x08005388                FLASH_IRQHandler
+                0x08005388                DMA2_Stream4_IRQHandler
+                0x08005388                USART1_IRQHandler
+                0x08005388                OTG_FS_IRQHandler
+                0x08005388                SPI3_IRQHandler
+                0x08005388                I2C1_ER_IRQHandler
+                0x08005388                FMC_IRQHandler
+                0x08005388                DMA2_Stream6_IRQHandler
+                0x08005388                SAI1_IRQHandler
+                0x08005388                DMA1_Stream3_IRQHandler
+ *fill*         0x0800538a        0x2 
  .text.calculate_kinematics
-                0x080053f0       0x8c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
-                0x080053f0                calculate_kinematics
+                0x0800538c       0x5c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+                0x0800538c                calculate_kinematics
  .text.parse_packet
-                0x0800547c      0x128 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
-                0x0800547c                parse_packet
+                0x080053e8      0x110 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+                0x080053e8                parse_packet
  .text.calculate_crc8
-                0x080055a4       0x72 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
-                0x080055a4                calculate_crc8
- *fill*         0x08005616        0x2 
+                0x080054f8       0x72 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+                0x080054f8                calculate_crc8
+ *fill*         0x0800556a        0x2 
  .text.parse_incoming_byte
-                0x08005618      0x11c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
-                0x08005618                parse_incoming_byte
- .text.PID_Init
-                0x08005734       0x56 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
-                0x08005734                PID_Init
- .text.PID_Update
-                0x0800578a      0x14e CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
-                0x0800578a                PID_Update
+                0x0800556c      0x11c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+                0x0800556c                parse_incoming_byte
+ .text.Master_PID_Init
+                0x08005688       0x60 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+                0x08005688                Master_PID_Init
+ .text.Slave_Init
+                0x080056e8       0x1e CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+                0x080056e8                Slave_Init
+ *fill*         0x08005706        0x2 
+ .text.calculate_master_pwm
+                0x08005708      0x194 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+                0x08005708                calculate_master_pwm
+ .text.update_rover_control
+                0x0800589c      0x1cc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+                0x0800589c                update_rover_control
  .text.apply_motor_power
-                0x080058d8       0xfc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
-                0x080058d8                apply_motor_power
+                0x08005a68       0xfc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+                0x08005a68                apply_motor_power
  .text.read_encoders
-                0x080059d4       0xa4 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
-                0x080059d4                read_encoders
- .text.memset   0x08005a78       0x10 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
-                0x08005a78                memset
+                0x08005b64       0xdc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+                0x08005b64                read_encoders
+ .text.memset   0x08005c40       0x10 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+                0x08005c40                memset
  .text.__libc_init_array
-                0x08005a88       0x48 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
-                0x08005a88                __libc_init_array
+                0x08005c50       0x48 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+                0x08005c50                __libc_init_array
  *(.glue_7)
- .glue_7        0x08005ad0        0x0 linker stubs
+ .glue_7        0x08005c98        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08005ad0        0x0 linker stubs
+ .glue_7t       0x08005c98        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08005ad0        0x0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08005c98        0x0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08005ad0        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08005ad0                _init
- .init          0x08005ad4        0x8 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08005c98        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08005c98                _init
+ .init          0x08005c9c        0x8 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08005adc        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08005adc                _fini
- .fini          0x08005ae0        0x8 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08005ae8                        . = ALIGN (0x4)
-                0x08005ae8                        _etext = .
+ .fini          0x08005ca4        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08005ca4                _fini
+ .fini          0x08005ca8        0x8 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08005cb0                        . = ALIGN (0x4)
+                0x08005cb0                        _etext = .
 
-.vfp11_veneer   0x08005ae8        0x0
- .vfp11_veneer  0x08005ae8        0x0 linker stubs
+.vfp11_veneer   0x08005cb0        0x0
+ .vfp11_veneer  0x08005cb0        0x0 linker stubs
 
-.v4_bx          0x08005ae8        0x0
- .v4_bx         0x08005ae8        0x0 linker stubs
+.v4_bx          0x08005cb0        0x0
+ .v4_bx         0x08005cb0        0x0 linker stubs
 
-.iplt           0x08005ae8        0x0
- .iplt          0x08005ae8        0x0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08005cb0        0x0
+ .iplt          0x08005cb0        0x0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08005ae8       0x20
-                0x08005ae8                        . = ALIGN (0x4)
+.rodata         0x08005cb0       0x20
+                0x08005cb0                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x08005ae8       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
-                0x08005ae8                AHBPrescTable
+                0x08005cb0       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
+                0x08005cb0                AHBPrescTable
  .rodata.APBPrescTable
-                0x08005af8        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
-                0x08005af8                APBPrescTable
+                0x08005cc0        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
+                0x08005cc0                APBPrescTable
  .rodata.flagBitshiftOffset.0
-                0x08005b00        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
-                0x08005b08                        . = ALIGN (0x4)
+                0x08005cc8        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x08005cd0                        . = ALIGN (0x4)
 
-.ARM.extab      0x08005b08        0x0
-                0x08005b08                        . = ALIGN (0x4)
+.ARM.extab      0x08005cd0        0x0
+                0x08005cd0                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08005b08                        . = ALIGN (0x4)
+                0x08005cd0                        . = ALIGN (0x4)
 
-.ARM            0x08005b08        0x8
-                0x08005b08                        . = ALIGN (0x4)
-                0x08005b08                        __exidx_start = .
+.ARM            0x08005cd0        0x8
+                0x08005cd0                        . = ALIGN (0x4)
+                0x08005cd0                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08005b08        0x8 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08005b10                        __exidx_end = .
-                0x08005b10                        . = ALIGN (0x4)
+ .ARM.exidx     0x08005cd0        0x8 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x08005cd8                        __exidx_end = .
+                0x08005cd8                        . = ALIGN (0x4)
 
-.preinit_array  0x08005b10        0x0
-                0x08005b10                        . = ALIGN (0x4)
-                0x08005b10                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08005cd8        0x0
+                0x08005cd8                        . = ALIGN (0x4)
+                0x08005cd8                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08005b10                        PROVIDE (__preinit_array_end = .)
-                0x08005b10                        . = ALIGN (0x4)
+                0x08005cd8                        PROVIDE (__preinit_array_end = .)
+                0x08005cd8                        . = ALIGN (0x4)
 
-.init_array     0x08005b10        0x4
-                0x08005b10                        . = ALIGN (0x4)
-                0x08005b10                        PROVIDE (__init_array_start = .)
+.init_array     0x08005cd8        0x4
+                0x08005cd8                        . = ALIGN (0x4)
+                0x08005cd8                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08005b10        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08005b14                        PROVIDE (__init_array_end = .)
-                0x08005b14                        . = ALIGN (0x4)
+ .init_array    0x08005cd8        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08005cdc                        PROVIDE (__init_array_end = .)
+                0x08005cdc                        . = ALIGN (0x4)
 
-.fini_array     0x08005b14        0x4
-                0x08005b14                        . = ALIGN (0x4)
+.fini_array     0x08005cdc        0x4
+                0x08005cdc                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08005b14        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x08005cdc        0x4 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x08005b18                        . = ALIGN (0x4)
-                0x08005b18                        _siccmram = LOADADDR (.ccmram)
+                0x08005ce0                        . = ALIGN (0x4)
+                0x08005ce0                        _siccmram = LOADADDR (.ccmram)
 
-.rel.dyn        0x08005b18        0x0
- .rel.iplt      0x08005b18        0x0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x08005ce0        0x0
+ .rel.iplt      0x08005ce0        0x0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.ccmram         0x10000000        0x0 load address 0x08005b18
+.ccmram         0x10000000        0x0 load address 0x08005ce0
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _sccmram = .
  *(.ccmram)
  *(.ccmram*)
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _eccmram = .
-                0x08005b18                        _sidata = LOADADDR (.data)
+                0x08005ce0                        _sidata = LOADADDR (.data)
 
-.data           0x20000000        0xc load address 0x08005b18
+.data           0x20000000        0xc load address 0x08005ce0
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -3910,10 +3932,10 @@ LOAD C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x2000000c                        . = ALIGN (0x4)
  *fill*         0x20000009        0x3 
 
-.igot.plt       0x2000000c        0x0 load address 0x08005b24
+.igot.plt       0x2000000c        0x0 load address 0x08005cec
  .igot.plt      0x2000000c        0x0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.tdata          0x2000000c        0x0 load address 0x08005b24
+.tdata          0x2000000c        0x0 load address 0x08005cec
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x2000000c                        . = ALIGN (0x4)
                 0x2000000c                        _edata = .
@@ -3930,7 +3952,7 @@ LOAD C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 [!provide]                        PROVIDE (__data_source_end = __tdata_source_end)
                 [!provide]                        PROVIDE (__data_source_size = (__data_source_end - __data_source))
 
-.tbss           0x2000000c        0x0 load address 0x08005b24
+.tbss           0x2000000c        0x0 load address 0x08005cec
                 0x2000000c                        _sbss = .
                 0x2000000c                        __bss_start__ = _sbss
  *(.tbss .tbss.*)
@@ -3947,7 +3969,7 @@ LOAD C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 [!provide]                        PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
 
-.bss            0x2000000c      0x5a8 load address 0x08005b24
+.bss            0x2000000c      0x560 load address 0x08005cec
  *(.bss)
  .bss           0x2000000c       0x1c C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.bss*)
@@ -3991,44 +4013,56 @@ LOAD C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .bss.rx_packet
                 0x20000498       0x18 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
                 0x20000498                rx_packet
- .bss.target_speed
-                0x200004b0       0x18 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
-                0x200004b0                target_speed
+ .bss.target_left_speed
+                0x200004b0        0x4 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+                0x200004b0                target_left_speed
+ .bss.target_right_speed
+                0x200004b4        0x4 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+                0x200004b4                target_right_speed
  .bss.last_packet_time
-                0x200004c8        0x4 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
-                0x200004c8                last_packet_time
- .bss.state.2   0x200004cc        0x1 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
- .bss.idx.1     0x200004cd        0x1 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
- *fill*         0x200004ce        0x2 
- .bss.buf.0     0x200004d0       0x18 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
- .bss.pid_controllers
-                0x200004e8       0xa8 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
-                0x200004e8                pid_controllers
+                0x200004b8        0x4 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+                0x200004b8                last_packet_time
+ .bss.state.2   0x200004bc        0x1 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+ .bss.idx.1     0x200004bd        0x1 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+ *fill*         0x200004be        0x2 
+ .bss.buf.0     0x200004c0       0x18 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+ .bss.left_board_pid
+                0x200004d8       0x20 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+                0x200004d8                left_board_pid
+ .bss.right_board_pid
+                0x200004f8       0x20 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+                0x200004f8                right_board_pid
+ .bss.wheel_slaves
+                0x20000518       0x18 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+                0x20000518                wheel_slaves
  .bss.current_speeds
-                0x20000590        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
-                0x20000590                current_speeds
+                0x20000530        0xc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+                0x20000530                current_speeds
+ .bss.current_wheel_speeds
+                0x2000053c       0x18 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+                0x2000053c                current_wheel_speeds
  .bss.last_cnt.0
-                0x2000059c       0x18 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+                0x20000554       0x18 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
  *(COMMON)
-                0x200005b4                        . = ALIGN (0x4)
-                0x200005b4                        _ebss = .
-                0x200005b4                        __bss_end__ = _ebss
+                0x2000056c                        . = ALIGN (0x4)
+                0x2000056c                        _ebss = .
+                0x2000056c                        __bss_end__ = _ebss
                 [!provide]                        PROVIDE (__bss_end = .)
                 [!provide]                        PROVIDE (__non_tls_bss_start = ADDR (.bss))
                 [!provide]                        PROVIDE (__bss_start = __tbss_start)
                 [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
 
 ._user_heap_stack
-                0x200005b4      0x604 load address 0x08005b24
-                0x200005b8                        . = ALIGN (0x8)
- *fill*         0x200005b4        0x4 
+                0x2000056c      0x604 load address 0x08005cec
+                0x20000570                        . = ALIGN (0x8)
+ *fill*         0x2000056c        0x4 
                 [!provide]                        PROVIDE (end = .)
-                0x200005b8                        PROVIDE (_end = .)
-                0x200007b8                        . = (. + _Min_Heap_Size)
- *fill*         0x200005b8      0x200 
-                0x20000bb8                        . = (. + _Min_Stack_Size)
- *fill*         0x200007b8      0x400 
-                0x20000bb8                        . = ALIGN (0x8)
+                0x20000570                        PROVIDE (_end = .)
+                0x20000770                        . = (. + _Min_Heap_Size)
+ *fill*         0x20000570      0x200 
+                0x20000b70                        . = (. + _Min_Stack_Size)
+ *fill*         0x20000770      0x400 
+                0x20000b70                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a:*(*)
@@ -4114,7 +4148,7 @@ LOAD linker stubs
  .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
  .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_info     0x00000000     0xed84
+.debug_info     0x00000000     0xefb8
  .debug_info    0x00000000      0x52e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
  .debug_info    0x0000052e     0x299d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .debug_info    0x00002ecb     0x14db cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
@@ -4125,18 +4159,18 @@ LOAD linker stubs
  .debug_info    0x00006301      0xdc2 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .debug_info    0x000070c3      0x9ba cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
  .debug_info    0x00007a7d     0x2f4f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_info    0x0000a9cc     0x1afc CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
- .debug_info    0x0000c4c8      0x681 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
- .debug_info    0x0000cb49     0x1392 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_info    0x0000dedb       0x30 CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
- .debug_info    0x0000df0b      0x5c5 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
- .debug_info    0x0000e4d0      0x1cd CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
- .debug_info    0x0000e69d      0x2be CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
- .debug_info    0x0000e95b      0x23e CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
- .debug_info    0x0000eb99       0xe0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_info    0x0000ec79      0x10b C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_info    0x0000a9cc     0x1aef CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+ .debug_info    0x0000c4bb      0x681 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+ .debug_info    0x0000cb3c     0x1392 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_info    0x0000dece       0x30 CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
+ .debug_info    0x0000defe      0x5ce CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+ .debug_info    0x0000e4cc      0x3d9 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .debug_info    0x0000e8a5      0x2be CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+ .debug_info    0x0000eb63      0x26a CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+ .debug_info    0x0000edcd       0xe0 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_info    0x0000eead      0x10b C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_abbrev   0x00000000     0x24b6
+.debug_abbrev   0x00000000     0x251b
  .debug_abbrev  0x00000000      0x11a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
  .debug_abbrev  0x0000011a      0x278 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .debug_abbrev  0x00000392      0x283 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
@@ -4152,13 +4186,13 @@ LOAD linker stubs
  .debug_abbrev  0x00001b91      0x27a CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_abbrev  0x00001e0b       0x24 CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
  .debug_abbrev  0x00001e2f      0x209 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
- .debug_abbrev  0x00002038      0x118 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
- .debug_abbrev  0x00002150       0xfe CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
- .debug_abbrev  0x0000224e      0x101 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
- .debug_abbrev  0x0000234f       0x9e C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_abbrev  0x000023ed       0xc9 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_abbrev  0x00002038      0x17b CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .debug_abbrev  0x000021b3       0xfe CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+ .debug_abbrev  0x000022b1      0x103 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+ .debug_abbrev  0x000023b4       0x9e C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_abbrev  0x00002452       0xc9 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_aranges  0x00000000      0xe00
+.debug_aranges  0x00000000      0xe10
  .debug_aranges
                 0x00000000       0x28 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
  .debug_aranges
@@ -4190,18 +4224,18 @@ LOAD linker stubs
  .debug_aranges
                 0x00000d20       0x38 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
  .debug_aranges
-                0x00000d58       0x28 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+                0x00000d58       0x38 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
  .debug_aranges
-                0x00000d80       0x20 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+                0x00000d90       0x20 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
  .debug_aranges
-                0x00000da0       0x20 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+                0x00000db0       0x20 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
  .debug_aranges
-                0x00000dc0       0x20 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+                0x00000dd0       0x20 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
  .debug_aranges
-                0x00000de0       0x20 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+                0x00000df0       0x20 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
 .debug_rnglists
-                0x00000000      0xae7
+                0x00000000      0xaf3
  .debug_rnglists
                 0x00000000       0x1a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
  .debug_rnglists
@@ -4231,19 +4265,19 @@ LOAD linker stubs
  .debug_rnglists
                 0x00000a3e       0x19 CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
  .debug_rnglists
-                0x00000a57       0x28 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+                0x00000a57       0x27 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
  .debug_rnglists
-                0x00000a7f       0x1a CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+                0x00000a7e       0x27 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
  .debug_rnglists
-                0x00000a99       0x14 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+                0x00000aa5       0x14 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
  .debug_rnglists
-                0x00000aad       0x14 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+                0x00000ab9       0x14 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
  .debug_rnglists
-                0x00000ac1       0x13 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+                0x00000acd       0x13 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
  .debug_rnglists
-                0x00000ad4       0x13 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+                0x00000ae0       0x13 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_macro    0x00000000    0x23461
+.debug_macro    0x00000000    0x234e9
  .debug_macro   0x00000000      0x1ce cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
  .debug_macro   0x000001ce      0xad8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
  .debug_macro   0x00000ca6       0x2e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
@@ -4293,19 +4327,20 @@ LOAD linker stubs
  .debug_macro   0x00022036      0x1ce cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .debug_macro   0x00022204      0x22e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
  .debug_macro   0x00022432      0x1cf cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_macro   0x00022601      0x1ff CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
- .debug_macro   0x00022800      0x160 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
- .debug_macro   0x00022960      0x1e7 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
- .debug_macro   0x00022b47      0x1dd CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_macro   0x00022d24      0x2aa CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
- .debug_macro   0x00022fce       0x74 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
- .debug_macro   0x00023042       0x10 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
- .debug_macro   0x00023052       0x20 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
- .debug_macro   0x00023072       0x1b CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
- .debug_macro   0x0002308d      0x1ed CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
- .debug_macro   0x0002327a      0x1e7 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+ .debug_macro   0x00022601      0x1fe CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+ .debug_macro   0x000227ff      0x160 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+ .debug_macro   0x0002295f       0x10 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+ .debug_macro   0x0002296f      0x1e7 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+ .debug_macro   0x00022b56      0x1dd CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_macro   0x00022d33      0x2aa CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+ .debug_macro   0x00022fdd       0x74 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+ .debug_macro   0x00023051       0x10 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+ .debug_macro   0x00023061       0x20 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+ .debug_macro   0x00023081       0x77 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .debug_macro   0x000230f8      0x1e6 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+ .debug_macro   0x000232de      0x20b CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
 
-.debug_line     0x00000000    0x105d9
+.debug_line     0x00000000    0x10915
  .debug_line    0x00000000      0x78d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
  .debug_line    0x0000078d     0x3784 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .debug_line    0x00003f11     0x1969 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
@@ -4316,41 +4351,41 @@ LOAD linker stubs
  .debug_line    0x00008b03      0xcd9 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .debug_line    0x000097dc      0xa42 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
  .debug_line    0x0000a21e     0x2551 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_line    0x0000c76f      0xe58 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
- .debug_line    0x0000d5c7      0x80e CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
- .debug_line    0x0000ddd5      0xaf6 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_line    0x0000e8cb       0x7a CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
- .debug_line    0x0000e945      0x94a CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
- .debug_line    0x0000f28f      0x166 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
- .debug_line    0x0000f3f5      0x79a CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
- .debug_line    0x0000fb8f      0x764 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
- .debug_line    0x000102f3      0x17e C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_line    0x00010471      0x168 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_line    0x0000c76f      0xe20 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+ .debug_line    0x0000d58f      0x80e CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+ .debug_line    0x0000dd9d      0xaf6 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_line    0x0000e893       0x7a CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
+ .debug_line    0x0000e90d      0x950 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+ .debug_line    0x0000f25d      0x4c2 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .debug_line    0x0000f71f      0x79a CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+ .debug_line    0x0000feb9      0x776 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+ .debug_line    0x0001062f      0x17e C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_line    0x000107ad      0x168 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_str      0x00000000    0xda21a
- .debug_str     0x00000000    0xda21a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
+.debug_str      0x00000000    0xda36d
+ .debug_str     0x00000000    0xda36d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
                               0xd2faa (size before relaxing)
- .debug_str     0x000da21a    0xd4321 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_str     0x000da21a    0xd3b2d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_str     0x000da21a    0xd33de cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_str     0x000da21a    0xd3125 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_str     0x000da21a    0xd33b1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_str     0x000da21a    0xd3182 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
- .debug_str     0x000da21a    0xd38fb cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_str     0x000da21a    0xd3bcd cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_str     0x000da21a    0xd39ac cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_str     0x000da21a    0xd48a1 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
- .debug_str     0x000da21a    0xd38ce CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
- .debug_str     0x000da21a    0xd4318 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_str     0x000da21a       0x90 CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
- .debug_str     0x000da21a    0xd60d3 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
- .debug_str     0x000da21a     0x2f1f CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
- .debug_str     0x000da21a    0xd33ef CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
- .debug_str     0x000da21a    0xd33a9 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
- .debug_str     0x000da21a      0x211 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_str     0x000da21a      0x272 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_str     0x000da36d    0xd4321 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_str     0x000da36d    0xd3b2d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_str     0x000da36d    0xd33de cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_str     0x000da36d    0xd3125 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_str     0x000da36d    0xd33b1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_str     0x000da36d    0xd3182 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+ .debug_str     0x000da36d    0xd38fb cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_str     0x000da36d    0xd3bcd cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_str     0x000da36d    0xd39ac cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_str     0x000da36d    0xd48d5 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/main.c.obj
+ .debug_str     0x000da36d    0xd38ce CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
+ .debug_str     0x000da36d    0xd4318 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_str     0x000da36d       0x90 CMakeFiles/Rover.dir/startup_stm32f429xx.s.obj
+ .debug_str     0x000da36d    0xd60ea CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
+ .debug_str     0x000da36d     0x3f2e CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .debug_str     0x000da36d    0xd33ef CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+ .debug_str     0x000da36d    0xd3462 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+ .debug_str     0x000da36d      0x211 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_str     0x000da36d      0x272 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_frame    0x00000000     0x362c
+.debug_frame    0x00000000     0x3674
  .debug_frame   0x00000000       0x50 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/system_stm32f4xx.c.obj
  .debug_frame   0x00000050     0x10f0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .debug_frame   0x00001140      0x600 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/C_/Users/trapm/Desktop/Rover/Rover/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
@@ -4365,13 +4400,13 @@ LOAD linker stubs
  .debug_frame   0x00003154      0x14c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_it.c.obj
  .debug_frame   0x000032a0      0x17c CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_frame   0x0000341c       0xa4 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/protocol.c.obj
- .debug_frame   0x000034c0       0x58 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
- .debug_frame   0x00003518       0x34 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
- .debug_frame   0x0000354c       0x34 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
- .debug_frame   0x00003580       0x2c C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x000035ac       0x34 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x000035e0       0x20 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_frame   0x00003600       0x2c C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_frame   0x000034c0       0xa0 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/pid.c.obj
+ .debug_frame   0x00003560       0x34 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/motor.c.obj
+ .debug_frame   0x00003594       0x34 CMakeFiles/Rover.dir/C_/Users/trapm/Desktop/Rover/Rover/Core/Src/encoder.c.obj
+ .debug_frame   0x000035c8       0x2c C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x000035f4       0x34 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00003628       0x20 C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_frame   0x00003648       0x2c C:/ST/STM32CubeCLT_1.21.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
 .debug_line_str
                 0x00000000       0x74
