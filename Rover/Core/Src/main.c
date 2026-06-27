@@ -181,6 +181,16 @@ int main(void)
             right_board_pid.integral_sum = 0.0f;
             HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, GPIO_PIN_RESET); // Зеленый ВЫКЛ
             HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_SET);   // Красный ВКЛ
+            
+            // Мигаем синим светодиодом (LD2) раз в 250 мс
+            if ((HAL_GetTick() / 250) % 2 == 0) {
+                HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
+            } else {
+                HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+            }
+        } else {
+            // При нормальной связи синий светодиод выключен
+            HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
         }
         
         read_encoders();
