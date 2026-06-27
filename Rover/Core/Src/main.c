@@ -196,14 +196,7 @@ int main(void)
             // Переводим скорость из "тиков за 20мс" в "метры в секунду"
             float current_speed_ms = (current_speeds[i] / 0.02f) * METERS_PER_TICK;
             
-            // Прямое управление без ПИД-регулятора
-            if (target_speed[i] > 0) {
-                motor_outputs[i] = target_speed[i] * 8999.0f; 
-            } else if (target_speed[i] < 0) {
-                motor_outputs[i] = target_speed[i] * 8999.0f; 
-            } else {
-                motor_outputs[i] = 0.0f;
-            }
+            motor_outputs[i] = target_speed[i] * (float)MAX_PWM;
         }
         
         apply_motor_power(motor_outputs);
