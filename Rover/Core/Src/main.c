@@ -177,6 +177,8 @@ int main(void)
         if (HAL_GetTick() - last_packet_time > 500) {
             target_left_speed = 0.0f;
             target_right_speed = 0.0f;
+            left_board_pid.integral_sum = 0.0f;
+            right_board_pid.integral_sum = 0.0f;
             HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, GPIO_PIN_RESET); // Зеленый ВЫКЛ
             HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_SET);   // Красный ВКЛ
         }
