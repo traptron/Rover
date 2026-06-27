@@ -65,6 +65,15 @@ void parse_packet(FixedPacket *packet) {
                 pid->kp = packet->payload.pid_tune.kp;
                 pid->ki = packet->payload.pid_tune.ki;
                 pid->kd = packet->payload.pid_tune.kd;
+                pid->kff = packet->payload.pid_tune.kff;
+                pid->min_pwm_offset = (float)packet->payload.pid_tune.min_pwm;
+                
+                float kp_sync = (float)packet->payload.pid_tune.kp_sync_x100 / 100.0f;
+                if (motor == 0) {
+                    for (int i = 0; i < 3; i++) wheel_slaves[i].kp_sync = kp_sync;
+                } else if (motor == 1) {
+                    for (int i = 3; i < 6; i++) wheel_slaves[i].kp_sync = kp_sync;
+                }
             }
             break;
         }
