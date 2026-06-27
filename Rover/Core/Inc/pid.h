@@ -1,26 +1,39 @@
 #ifndef PID_H
 #define PID_H
 
-// Структура для ПИД-регулятора
+#include <stdint.h>
+
+// Главный ПИД-регулятор (Master) - по одному на каждый борт (Левый и Правый)
 typedef struct {
-    float Kp;
-    float Ki;
-    float Kd;
-    
-    float integral;     // Накопленная интегральная сумма
-    float prev_error;   // Ошибка на предыдущем шаге
-    
-    float out_min;      // Минимальное выходное значение
-    float out_max;      // Максимальное выходное значение
-} PID_Controller_t;
+    float kp, ki, kd;
+    float kff;            // Feed-Forward коэффициент
+    float min_pwm_offset; // Порог страгивания (мертвая зона)
+    float integral_sum;
+    float prev_error;
+    float out_max;        // Максимальный ШИМ (например, 8999)
+} Master_PID;
 
-// Массив контроллеров для 6 моторов
-extern PID_Controller_t pid_controllers[6];
+// Подчиненный П-регулятор (Slave) - для каждого отдельного колеса
+typedef struct {
+    float kp_sync;        // Коэффициент выравнивания скорости колеса
+} Slave_Controller;
 
-// Инициализация ПИД-регулятора
-void PID_Init(PID_Controller_t *pid, float kp, float ki, float kd, float out_min, float out_max);
+// Глобальные контроллеры
+extern Master_PID left_board_pid;
+extern Master_PID right_board_pid;
+extern Slave_Controller wheel_slaves[6]; // 0,1,2 - Левые; 3,4,5 - Правые
 
-// Вычисление управляющего воздействия (выхода)
-float PID_Update(PID_Controller_t *pid, float setpoint, float current_value, float dt);
+// Инициализация Master PID
+void Master_PID_Init(Master_PID *pid, float kp, float ki, float kd,
+                     float kff, float min_pwm_offset, float out_max);
+
+// Инициализация Slave контроллера
+void Slave_Init(Slave_Controller *slave, float kp_sync);
+
+// Вычисление базового ШИМ для борта (Master)
+float calculate_master_pwm(Master_PID *pid, float target_vel, float current_avg_vel, float dt);
+
+// Главная функция обновления скоростей (вызывать каждые 20 мс)
+void update_rover_control(float target_left_vel, float target_right_vel, float dt, float *output_pwm);
 
 #endif /* PID_H */

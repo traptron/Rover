@@ -4,23 +4,17 @@
 
 // Определение глобальных переменных
 FixedPacket rx_packet;
-float target_speed[6];
+float target_left_speed = 0.0f;
+float target_right_speed = 0.0f;
 uint32_t last_packet_time = 0;
 
 void calculate_kinematics(float linear_x, float angular_z) {
-    float track_width = 0.3f; // 0.3 метра
-    float left_speed = linear_x - (angular_z * track_width / 2.0f);
-    float right_speed = linear_x + (angular_z * track_width / 2.0f);
+    // Коэффициент усиления поворота для skid-steer.
+    // При angular_z = 1.0 мотор получит скорость +/- 1.0
+    float angular_scale = 1.0f;
     
-    // Левые колеса: 0, 1, 2
-    target_speed[0] = left_speed;
-    target_speed[1] = left_speed;
-    target_speed[2] = left_speed;
-    
-    // Правые колеса: 3, 4, 5
-    target_speed[3] = right_speed;
-    target_speed[4] = right_speed;
-    target_speed[5] = right_speed;
+    target_left_speed  = linear_x - (angular_z * angular_scale);
+    target_right_speed = linear_x + (angular_z * angular_scale);
 }
 
 
@@ -61,12 +55,25 @@ void parse_packet(FixedPacket *packet) {
             break;
         }
             
-        case 2: { // Настройка ПИД
+        case 2: { // Настройка ПИД (motor_id: 0 = левый борт, 1 = правый борт)
             uint8_t motor = packet->payload.pid_tune.motor_id;
-            if (motor < 6) {
-                pid_controllers[motor].Kp = packet->payload.pid_tune.kp;
-                pid_controllers[motor].Ki = packet->payload.pid_tune.ki;
-                pid_controllers[motor].Kd = packet->payload.pid_tune.kd;
+            Master_PID *pid = NULL;
+            if (motor == 0) pid = &left_board_pid;
+            else if (motor == 1) pid = &right_board_pid;
+            
+            if (pid != NULL) {
+                pid->kp = packet->payload.pid_tune.kp;
+                pid->ki = packet->payload.pid_tune.ki;
+                pid->kd = packet->payload.pid_tune.kd;
+                pid->kff = packet->payload.pid_tune.kff;
+                pid->min_pwm_offset = (float)packet->payload.pid_tune.min_pwm;
+                
+                float kp_sync = (float)packet->payload.pid_tune.kp_sync_x100 / 100.0f;
+                if (motor == 0) {
+                    for (int i = 0; i < 3; i++) wheel_slaves[i].kp_sync = kp_sync;
+                } else if (motor == 1) {
+                    for (int i = 3; i < 6; i++) wheel_slaves[i].kp_sync = kp_sync;
+                }
             }
             break;
         }

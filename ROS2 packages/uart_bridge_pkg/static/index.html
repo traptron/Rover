@@ -47,10 +47,14 @@
         }
         .chart-container {
             flex: 2;
+            display: flex;
+            flex-direction: column;
         }
-        canvas {
-            width: 100% !important;
-            height: 350px !important;
+        .canvas-wrapper {
+            position: relative;
+            width: 100%;
+            flex-grow: 1;
+            min-height: 400px;
         }
         .form-group {
             margin-bottom: 15px;
@@ -105,8 +109,8 @@
             .panel {
                 padding: 15px;
             }
-            canvas {
-                height: 280px !important;
+            .canvas-wrapper {
+                min-height: 280px;
             }
             h1 {
                 font-size: 20px;
@@ -128,27 +132,35 @@
             <h2>PID Tuning</h2>
             <form id="pid-form">
                 <div class="form-group">
-                    <label for="motor_id">Motor ID:</label>
+                    <label for="motor_id">Board ID:</label>
                     <select id="motor_id" name="motor_id">
-                        <option value="0">Motor 0 (Front Left)</option>
-                        <option value="1">Motor 1 (Mid Left)</option>
-                        <option value="2">Motor 2 (Rear Left)</option>
-                        <option value="3">Motor 3 (Front Right)</option>
-                        <option value="4">Motor 4 (Mid Right)</option>
-                        <option value="5">Motor 5 (Rear Right)</option>
+                        <option value="0">0: Левый борт (Left Board)</option>
+                        <option value="1">1: Правый борт (Right Board)</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="kp">Kp:</label>
-                    <input type="number" id="kp" name="kp" step="0.01" value="1.0" required>
+                    <input type="number" id="kp" name="kp" step="0.001" value="1.0" required>
                 </div>
                 <div class="form-group">
                     <label for="ki">Ki:</label>
-                    <input type="number" id="ki" name="ki" step="0.01" value="0.0" required>
+                    <input type="number" id="ki" name="ki" step="0.001" value="0.0" required>
                 </div>
                 <div class="form-group">
                     <label for="kd">Kd:</label>
-                    <input type="number" id="kd" name="kd" step="0.01" value="0.0" required>
+                    <input type="number" id="kd" name="kd" step="0.001" value="0.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="kff">Kff:</label>
+                    <input type="number" id="kff" name="kff" step="0.001" value="0.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="min_pwm">Min PWM Offset:</label>
+                    <input type="number" id="min_pwm" name="min_pwm" step="1" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="kp_sync">Kp Sync:</label>
+                    <input type="number" id="kp_sync" name="kp_sync" step="0.001" value="0.5" required>
                 </div>
                 <button type="submit">Update PID</button>
             </form>
@@ -156,8 +168,10 @@
 
         <!-- Chart Panel -->
         <div class="panel chart-container">
-            <h2>Encoder Speeds</h2>
-            <canvas id="encoderChart"></canvas>
+            <h2>Wheel Speeds (m/s)</h2>
+            <div class="canvas-wrapper">
+                <canvas id="encoderChart"></canvas>
+            </div>
         </div>
     </div>
 
@@ -215,11 +229,14 @@
             }
         });
 
+        const METERS_PER_TICK = (Math.PI * 0.10) / (46.0 * 44.0);
+
         // Socket.IO event listener for encoder data
         socket.on('encoder_data', function(data) {
-            // data is an array of 6 integers
+            // data is an array of 6 integers (ticks per 20ms)
             for (let i = 0; i < 6; i++) {
-                chart.data.datasets[i].data.push(data[i]);
+                let speed_ms = (data[i] / 0.02) * METERS_PER_TICK;
+                chart.data.datasets[i].data.push(speed_ms);
                 chart.data.datasets[i].data.shift();
             }
             chart.update();
@@ -232,7 +249,10 @@
                 motor_id: parseInt(document.getElementById('motor_id').value),
                 kp: parseFloat(document.getElementById('kp').value),
                 ki: parseFloat(document.getElementById('ki').value),
-                kd: parseFloat(document.getElementById('kd').value)
+                kd: parseFloat(document.getElementById('kd').value),
+                kff: parseFloat(document.getElementById('kff').value),
+                min_pwm: parseInt(document.getElementById('min_pwm').value),
+                kp_sync: parseFloat(document.getElementById('kp_sync').value)
             };
             socket.emit('update_pid', payload);
             console.log("PID update emitted:", payload);

@@ -1,8 +1,6 @@
 #include "motor.h"
 #include "main.h"
 
-#define MAX_PWM 8999
-
 void apply_motor_power(float *powers) {
     for (int i = 0; i < 6; ++i) {
         int32_t power_int = (int32_t)powers[i];

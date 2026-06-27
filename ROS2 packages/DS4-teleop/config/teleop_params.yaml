@@ -1,0 +1,24 @@
+# Default parameters for teleoperation node
+
+teleop_ds4_node:
+  ros__parameters:
+    # Maximum linear velocity (m/s)
+    max_linear_speed: 1.0
+    
+    # Maximum angular velocity (rad/s)
+    max_angular_speed: 1.0
+    
+    # Deadzone threshold for analog inputs [0.0, 1.0]
+    # Inputs below this value are ignored
+    deadzone: 0.05
+    
+    # Acceleration limit (units/s²)
+    # Limits rate of speed change to prevent sudden jumps
+    accel_limit: 0.5
+    
+    # Watchdog timeout (seconds)
+    # If no joy message received for this duration, stop the rover
+    watchdog_timeout: 0.2
+    
+    # Enable debug logging
+    debug: false
