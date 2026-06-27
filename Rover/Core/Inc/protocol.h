@@ -44,7 +44,8 @@ typedef struct {
 #pragma pack(pop)
 
 extern FixedPacket rx_packet;
-extern float target_speed[6];
+extern float target_left_speed;
+extern float target_right_speed;
 extern uint32_t last_packet_time;
 
 

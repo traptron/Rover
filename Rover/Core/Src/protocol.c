@@ -4,28 +4,17 @@
 
 // Определение глобальных переменных
 FixedPacket rx_packet;
-float target_speed[6];
+float target_left_speed = 0.0f;
+float target_right_speed = 0.0f;
 uint32_t last_packet_time = 0;
 
 void calculate_kinematics(float linear_x, float angular_z) {
-    // В открытом контуре (без ПИД) для skid-steer (танкового) поворота 
-    // требуется большой крутящий момент. Использование реальной ширины колеи (0.3м) 
-    // дает слишком слабый вклад от angular_z (+/- 0.15).
-    // Поэтому вводим программный коэффициент усиления поворота.
-    float angular_scale = 1.0f; // При angular_z = 1.0 мотор получит скорость +/- 1.0
+    // Коэффициент усиления поворота для skid-steer.
+    // При angular_z = 1.0 мотор получит скорость +/- 1.0
+    float angular_scale = 1.0f;
     
-    float left_speed = linear_x - (angular_z * angular_scale);
-    float right_speed = linear_x + (angular_z * angular_scale);
-    
-    // Левые колеса: 0, 1, 2
-    target_speed[0] = left_speed;
-    target_speed[1] = left_speed;
-    target_speed[2] = left_speed;
-    
-    // Правые колеса: 3, 4, 5
-    target_speed[3] = right_speed;
-    target_speed[4] = right_speed;
-    target_speed[5] = right_speed;
+    target_left_speed  = linear_x - (angular_z * angular_scale);
+    target_right_speed = linear_x + (angular_z * angular_scale);
 }
 
 
@@ -66,12 +55,16 @@ void parse_packet(FixedPacket *packet) {
             break;
         }
             
-        case 2: { // Настройка ПИД
+        case 2: { // Настройка ПИД (motor_id: 0 = левый борт, 1 = правый борт)
             uint8_t motor = packet->payload.pid_tune.motor_id;
-            if (motor < 6) {
-                pid_controllers[motor].Kp = packet->payload.pid_tune.kp;
-                pid_controllers[motor].Ki = packet->payload.pid_tune.ki;
-                pid_controllers[motor].Kd = packet->payload.pid_tune.kd;
+            Master_PID *pid = NULL;
+            if (motor == 0) pid = &left_board_pid;
+            else if (motor == 1) pid = &right_board_pid;
+            
+            if (pid != NULL) {
+                pid->kp = packet->payload.pid_tune.kp;
+                pid->ki = packet->payload.pid_tune.ki;
+                pid->kd = packet->payload.pid_tune.kd;
             }
             break;
         }
