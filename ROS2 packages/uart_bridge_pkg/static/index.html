@@ -156,7 +156,7 @@
 
         <!-- Chart Panel -->
         <div class="panel chart-container">
-            <h2>Encoder Speeds</h2>
+            <h2>Wheel Speeds (m/s)</h2>
             <canvas id="encoderChart"></canvas>
         </div>
     </div>
@@ -215,11 +215,14 @@
             }
         });
 
+        const METERS_PER_TICK = (Math.PI * 0.10) / (46.0 * 44.0);
+
         // Socket.IO event listener for encoder data
         socket.on('encoder_data', function(data) {
-            // data is an array of 6 integers
+            // data is an array of 6 integers (ticks per 20ms)
             for (let i = 0; i < 6; i++) {
-                chart.data.datasets[i].data.push(data[i]);
+                let speed_ms = (data[i] / 0.02) * METERS_PER_TICK;
+                chart.data.datasets[i].data.push(speed_ms);
                 chart.data.datasets[i].data.shift();
             }
             chart.update();
