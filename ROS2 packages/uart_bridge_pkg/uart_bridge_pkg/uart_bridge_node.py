@@ -34,6 +34,9 @@ class UartBridgeNode(Node):
         self.declare_parameter('kp', 1.0)
         self.declare_parameter('ki', 0.0)
         self.declare_parameter('kd', 0.0)
+        self.declare_parameter('kff', 0.0)
+        self.declare_parameter('min_pwm', 0)
+        self.declare_parameter('kp_sync', 0.0)
         self.declare_parameter('motor_id', 0)
         self.declare_parameter('serial_port', '/dev/ttyS7')
         self.declare_parameter('baudrate', 115200)
@@ -75,6 +78,9 @@ class UartBridgeNode(Node):
         kp = self.get_parameter('kp').value
         ki = self.get_parameter('ki').value
         kd = self.get_parameter('kd').value
+        kff = self.get_parameter('kff').value
+        min_pwm = self.get_parameter('min_pwm').value
+        kp_sync = self.get_parameter('kp_sync').value
         motor_id = self.get_parameter('motor_id').value
         
         for param in params:
@@ -87,20 +93,33 @@ class UartBridgeNode(Node):
             elif param.name == 'kd':
                 kd = float(param.value)
                 updated = True
+            elif param.name == 'kff':
+                kff = float(param.value)
+                updated = True
+            elif param.name == 'min_pwm':
+                min_pwm = int(param.value)
+                updated = True
+            elif param.name == 'kp_sync':
+                kp_sync = float(param.value)
+                updated = True
             elif param.name == 'motor_id':
                 motor_id = int(param.value)
                 updated = True
         
         if updated:
-            self.send_pid_tune(motor_id, kp, ki, kd)
-            self.get_logger().info(f"PID Tune Sent - Motor {motor_id}: Kp={kp}, Ki={ki}, Kd={kd}")
+            self.send_pid_tune(motor_id, kp, ki, kd, kff, min_pwm, kp_sync)
+            self.get_logger().info(f"PID Tune Sent - Motor {motor_id}: Kp={kp}, Ki={ki}, Kd={kd}, Kff={kff}, MinPWM={min_pwm}, KpSync={kp_sync}")
         
         return SetParametersResult(successful=True)
 
-    def send_pid_tune(self, motor_id, kp, ki, kd):
+    def send_pid_tune(self, motor_id, kp, ki, kd, kff, min_pwm, kp_sync):
         # Упаковка сообщения настройки ПИД (msg_id=2)
-        # Заголовок (2), msg_id (1), motor_id (1), kp (4), ki (4), kd (4), резерв (7)
-        payload = struct.pack('<H B B f f f 7s', 0xAA55, 2, motor_id, kp, ki, kd, b'\x00'*7)
+        # Заголовок (2), msg_id (1), motor_id (1), kp (4), ki (4), kd (4), kff (4), min_pwm (2), kp_sync_x100 (1)
+        kp_sync_x100 = int(kp_sync * 100)
+        if kp_sync_x100 < 0: kp_sync_x100 = 0
+        if kp_sync_x100 > 255: kp_sync_x100 = 255
+        
+        payload = struct.pack('<H B B f f f f H B', 0xAA55, 2, motor_id, kp, ki, kd, kff, min_pwm, kp_sync_x100)
         crc = calculate_crc8(payload)
         packet = payload + struct.pack('<B', crc)
         

@@ -150,6 +150,18 @@
                     <label for="kd">Kd:</label>
                     <input type="number" id="kd" name="kd" step="0.01" value="0.0" required>
                 </div>
+                <div class="form-group">
+                    <label for="kff">Kff:</label>
+                    <input type="number" id="kff" name="kff" step="0.01" value="0.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="min_pwm">Min PWM Offset:</label>
+                    <input type="number" id="min_pwm" name="min_pwm" step="1" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="kp_sync">Kp Sync:</label>
+                    <input type="number" id="kp_sync" name="kp_sync" step="0.01" value="0.5" required>
+                </div>
                 <button type="submit">Update PID</button>
             </form>
         </div>
@@ -235,7 +247,10 @@
                 motor_id: parseInt(document.getElementById('motor_id').value),
                 kp: parseFloat(document.getElementById('kp').value),
                 ki: parseFloat(document.getElementById('ki').value),
-                kd: parseFloat(document.getElementById('kd').value)
+                kd: parseFloat(document.getElementById('kd').value),
+                kff: parseFloat(document.getElementById('kff').value),
+                min_pwm: parseInt(document.getElementById('min_pwm').value),
+                kp_sync: parseFloat(document.getElementById('kp_sync').value)
             };
             socket.emit('update_pid', payload);
             console.log("PID update emitted:", payload);

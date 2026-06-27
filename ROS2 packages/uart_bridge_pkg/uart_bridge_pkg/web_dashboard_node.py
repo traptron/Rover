@@ -37,7 +37,7 @@ class WebDashboardNode(Node):
         # Отправка через socketio
         socketio.emit('encoder_data', list(msg.data))
 
-    def update_pid_params(self, motor_id, kp, ki, kd):
+    def update_pid_params(self, motor_id, kp, ki, kd, kff, min_pwm, kp_sync):
         # Ожидание доступности сервиса
         if not self.param_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().error('Service /uart_bridge_node/set_parameters not available')
@@ -65,7 +65,22 @@ class WebDashboardNode(Node):
         p_kd.value.type = ParameterType.PARAMETER_DOUBLE
         p_kd.value.double_value = float(kd)
         
-        req.parameters = [p_motor, p_kp, p_ki, p_kd]
+        p_kff = Parameter()
+        p_kff.name = 'kff'
+        p_kff.value.type = ParameterType.PARAMETER_DOUBLE
+        p_kff.value.double_value = float(kff)
+        
+        p_min_pwm = Parameter()
+        p_min_pwm.name = 'min_pwm'
+        p_min_pwm.value.type = ParameterType.PARAMETER_INTEGER
+        p_min_pwm.value.integer_value = int(min_pwm)
+        
+        p_kp_sync = Parameter()
+        p_kp_sync.name = 'kp_sync'
+        p_kp_sync.value.type = ParameterType.PARAMETER_DOUBLE
+        p_kp_sync.value.double_value = float(kp_sync)
+        
+        req.parameters = [p_motor, p_kp, p_ki, p_kd, p_kff, p_min_pwm, p_kp_sync]
         
         future = self.param_client.call_async(req)
         future.add_done_callback(self.param_response_cb)
@@ -90,8 +105,11 @@ def handle_update_pid(data):
         kp = data.get('kp', 0.0)
         ki = data.get('ki', 0.0)
         kd = data.get('kd', 0.0)
-        ros_node.get_logger().info(f"Received web update: motor={motor_id}, Kp={kp}, Ki={ki}, Kd={kd}")
-        ros_node.update_pid_params(motor_id, kp, ki, kd)
+        kff = data.get('kff', 0.0)
+        min_pwm = data.get('min_pwm', 0)
+        kp_sync = data.get('kp_sync', 0.0)
+        ros_node.get_logger().info(f"Received web update: motor={motor_id}, Kp={kp}, Ki={ki}, Kd={kd}, Kff={kff}, MinPWM={min_pwm}, KpSync={kp_sync}")
+        ros_node.update_pid_params(motor_id, kp, ki, kd, kff, min_pwm, kp_sync)
 
 def spin_ros():
     rclpy.spin(ros_node)
