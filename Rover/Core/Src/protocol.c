@@ -8,9 +8,14 @@ float target_speed[6];
 uint32_t last_packet_time = 0;
 
 void calculate_kinematics(float linear_x, float angular_z) {
-    float track_width = 0.3f; // 0.3 метра
-    float left_speed = linear_x - (angular_z * track_width / 2.0f);
-    float right_speed = linear_x + (angular_z * track_width / 2.0f);
+    // В открытом контуре (без ПИД) для skid-steer (танкового) поворота 
+    // требуется большой крутящий момент. Использование реальной ширины колеи (0.3м) 
+    // дает слишком слабый вклад от angular_z (+/- 0.15).
+    // Поэтому вводим программный коэффициент усиления поворота.
+    float angular_scale = 1.0f; // При angular_z = 1.0 мотор получит скорость +/- 1.0
+    
+    float left_speed = linear_x - (angular_z * angular_scale);
+    float right_speed = linear_x + (angular_z * angular_scale);
     
     // Левые колеса: 0, 1, 2
     target_speed[0] = left_speed;
